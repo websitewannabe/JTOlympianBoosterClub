@@ -25,7 +25,7 @@ const HeroBanner = () => {
       ></div>
       
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#FF4444] to-[#0094FF] opacity-50 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#FF4444] to-[#023FA6] opacity-50 z-10"></div>
       
       <div className="container mx-auto px-4 relative z-20 text-white">
         <div className="max-w-[1200px] mx-auto">

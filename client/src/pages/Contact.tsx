@@ -38,7 +38,7 @@ const Contact = () => {
         ></div>
 
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FF4444] to-[#0094FF] opacity-70 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FF4444] to-[#023FA6] opacity-70 z-10"></div>
 
         <div className="relative z-20 text-center text-white px-4">
           <h1 className="old-sport-font text-6xl md:text-8xl mb-6 text-white drop-shadow-lg">
