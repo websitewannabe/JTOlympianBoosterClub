@@ -8,11 +8,11 @@ interface MobileMenuProps {
 }
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, onDonateClick }) => {
-  const [showAboutSubmenu, setShowAboutSubmenu] = useState(false);
+  const [showCheerSubmenu, setShowCheerSubmenu] = useState(false);
 
   const closeMenu = () => {
     setIsOpen(false);
-    setShowAboutSubmenu(false);
+    setShowCheerSubmenu(false);
   };
   
   const handleDonateClick = () => {
@@ -33,7 +33,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, onDonateClic
         <div className="p-4">
           <button
             onClick={closeMenu}
-            className="mb-6 text-white hover:text-secondary"
+            className="mb-6 text-white hover:text-[#023FA6]"
             aria-label="Close menu"
           >
             <i className="fas fa-times text-2xl"></i>
@@ -42,71 +42,70 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, onDonateClic
           <div className="flex flex-col space-y-3 text-white">
             <Link
               href="/"
-              className="font-montserrat font-semibold hover:text-secondary transition-colors py-2 border-b border-lightblue"
+              className="font-montserrat font-semibold hover:text-[#023FA6] transition-colors py-2 border-b border-lightblue"
               onClick={closeMenu}
+              aria-label="Home"
             >
+              <i className="fas fa-home text-lg mr-2"></i>
               HOME
             </Link>
             
             <div className="py-2 border-b border-lightblue">
               <button
-                onClick={() => setShowAboutSubmenu(!showAboutSubmenu)}
-                className="font-montserrat font-semibold hover:text-secondary transition-colors flex items-center justify-between w-full"
+                onClick={() => setShowCheerSubmenu(!showCheerSubmenu)}
+                className="font-montserrat font-semibold hover:text-[#023FA6] transition-colors flex items-center justify-between w-full"
               >
-                <span>ABOUT</span>
-                <i className={`fas fa-chevron-${showAboutSubmenu ? 'up' : 'down'} text-sm`}></i>
+                <span>CHEER</span>
+                <i className={`fas fa-chevron-${showCheerSubmenu ? 'up' : 'down'} text-sm`}></i>
               </button>
               
-              {showAboutSubmenu && (
+              {showCheerSubmenu && (
                 <div className="mt-2 pl-4 flex flex-col space-y-2">
-                  <Link href="/about#mission" className="text-white hover:text-secondary" onClick={closeMenu}>
-                    Mission & Vision
+                  <Link href="/competition-cheer" className="text-white hover:text-[#023FA6]" onClick={closeMenu}>
+                    Competition Cheer
                   </Link>
-                  <Link href="/about#board" className="text-white hover:text-secondary" onClick={closeMenu}>
-                    Board Members
-                  </Link>
-                  <Link href="/about#bylaws" className="text-white hover:text-secondary" onClick={closeMenu}>
-                    Bylaws & Policies
+                  <Link href="/sideline-cheer" className="text-white hover:text-[#023FA6]" onClick={closeMenu}>
+                    Sideline Cheer
                   </Link>
                 </div>
               )}
             </div>
             
             <Link
-              href="/membership"
-              className="font-montserrat font-semibold hover:text-secondary transition-colors py-2 border-b border-lightblue"
+              href="/cross-country"
+              className="font-montserrat font-semibold hover:text-[#023FA6] transition-colors py-2 border-b border-lightblue"
               onClick={closeMenu}
             >
-              MEMBERSHIP
+              CROSS COUNTRY
             </Link>
             
             <Link
-              href="/events"
-              className="font-montserrat font-semibold hover:text-secondary transition-colors py-2 border-b border-lightblue"
+              href="/football"
+              className="font-montserrat font-semibold hover:text-[#023FA6] transition-colors py-2 border-b border-lightblue"
               onClick={closeMenu}
             >
-              EVENTS
+              FOOTBALL
             </Link>
             
             <Link
-              href="/news"
-              className="font-montserrat font-semibold hover:text-secondary transition-colors py-2 border-b border-lightblue"
+              href="/girls-volleyball"
+              className="font-montserrat font-semibold hover:text-[#023FA6] transition-colors py-2 border-b border-lightblue"
               onClick={closeMenu}
             >
-              NEWS
+              GIRLS VOLLEYBALL
             </Link>
             
             <Link
-              href="/gallery"
-              className="font-montserrat font-semibold hover:text-secondary transition-colors py-2 border-b border-lightblue"
+              href="/wrestling"
+              className="font-montserrat font-semibold hover:text-[#023FA6] transition-colors py-2 border-b border-lightblue"
               onClick={closeMenu}
             >
-              GALLERY
+              WRESTLING
             </Link>
             
             <Link
               href="/contact"
-              className="font-montserrat font-semibold hover:text-secondary transition-colors py-2 border-b border-lightblue"
+              className="font-montserrat font-semibold hover:text-[#023FA6] transition-colors py-2 border-b border-lightblue"
               onClick={closeMenu}
             >
               CONTACT
