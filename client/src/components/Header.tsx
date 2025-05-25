@@ -40,7 +40,7 @@ const Header = () => {
           <nav className="flex space-x-6 text-white">
             <Link 
               href="/" 
-              className={`font-montserrat font-semibold hover:text-[#0094FF] transition-colors ${activeTab === "/" ? "active-tab" : ""}`}
+              className={`font-montserrat font-semibold hover:text-[#023FA6] transition-colors ${activeTab === "/" ? "active-tab" : ""}`}
               aria-label="Home"
             >
               <i className="fas fa-home text-lg"></i>
@@ -49,16 +49,16 @@ const Header = () => {
             <div className="dropdown relative">
               <Link 
                 href="/cheer" 
-                className={`font-montserrat font-semibold hover:text-[#0094FF] transition-colors flex items-center ${activeTab === "/cheer" ? "active-tab" : ""}`}
+                className={`font-montserrat font-semibold hover:text-[#023FA6] transition-colors flex items-center ${activeTab === "/cheer" ? "active-tab" : ""}`}
               >
                 CHEER
                 <i className="fas fa-chevron-down ml-1 text-xs"></i>
               </Link>
               <div className="dropdown-menu hidden absolute bg-white shadow-lg rounded mt-1 py-2 w-48 z-20">
-                <Link href="/cheer/competition" className="block px-4 py-2 text-primary hover:bg-lightgray">
+                <Link href="/cheer/competition" className="block px-4 py-2 text-primary hover:text-[#023FA6]">
                   Competition Cheer
                 </Link>
-                <Link href="/cheer/sideline" className="block px-4 py-2 text-primary hover:bg-lightgray">
+                <Link href="/cheer/sideline" className="block px-4 py-2 text-primary hover:text-[#023FA6]">
                   Sideline Cheer
                 </Link>
               </div>
@@ -66,35 +66,35 @@ const Header = () => {
             
             <Link 
               href="/cross-country" 
-              className={`font-montserrat font-semibold hover:text-[#0094FF] transition-colors ${activeTab === "/cross-country" ? "active-tab" : ""}`}
+              className={`font-montserrat font-semibold hover:text-[#023FA6] transition-colors ${activeTab === "/cross-country" ? "active-tab" : ""}`}
             >
               CROSS COUNTRY
             </Link>
             
             <Link 
               href="/football" 
-              className={`font-montserrat font-semibold hover:text-[#0094FF] transition-colors ${activeTab === "/football" ? "active-tab" : ""}`}
+              className={`font-montserrat font-semibold hover:text-[#023FA6] transition-colors ${activeTab === "/football" ? "active-tab" : ""}`}
             >
               FOOTBALL
             </Link>
             
             <Link 
               href="/girls-volleyball" 
-              className={`font-montserrat font-semibold hover:text-[#0094FF] transition-colors ${activeTab === "/girls-volleyball" ? "active-tab" : ""}`}
+              className={`font-montserrat font-semibold hover:text-[#023FA6] transition-colors ${activeTab === "/girls-volleyball" ? "active-tab" : ""}`}
             >
               GIRLS VOLLEYBALL
             </Link>
             
             <Link 
               href="/wrestling" 
-              className={`font-montserrat font-semibold hover:text-[#0094FF] transition-colors ${activeTab === "/wrestling" ? "active-tab" : ""}`}
+              className={`font-montserrat font-semibold hover:text-[#023FA6] transition-colors ${activeTab === "/wrestling" ? "active-tab" : ""}`}
             >
               WRESTLING
             </Link>
             
             <Link 
               href="/contact" 
-              className={`font-montserrat font-semibold hover:text-[#0094FF] transition-colors ${activeTab === "/contact" ? "active-tab" : ""}`}
+              className={`font-montserrat font-semibold hover:text-[#023FA6] transition-colors ${activeTab === "/contact" ? "active-tab" : ""}`}
             >
               CONTACT
             </Link>
