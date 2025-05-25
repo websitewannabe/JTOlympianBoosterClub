@@ -80,30 +80,6 @@ const Footer = () => {
                 <span>olympianbooster@gmail.com</span>
               </li>
             </ul>
-            
-            <div className="mt-4">
-              <h4 className="text-sm font-semibold mb-2">SUBSCRIBE TO OUR NEWSLETTER</h4>
-              <form onSubmit={handleSubscribe} data-netlify="true" name="newsletter-form" method="POST" className="flex flex-col space-y-2">
-                <input type="hidden" name="form-name" value="newsletter-form" />
-                <div className="flex">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Your email address"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="flex-grow px-3 py-2 text-black rounded-l-md focus:outline-none"
-                  />
-                  <button
-                    type="submit"
-                    className="bg-[#FF4444] px-4 py-2 rounded-r-md hover:bg-red-600 transition-colors"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? "..." : "Join"}
-                  </button>
-                </div>
-              </form>
-            </div>
           </div>
         </div>
         
