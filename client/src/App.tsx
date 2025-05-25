@@ -3,7 +3,7 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/not-found";
+import NotFound from "./pages/not-found";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet";
@@ -19,7 +19,10 @@ import Wrestling from "./pages/Wrestling";
 import Cheer from "./pages/Cheer";
 import CheerCompetition from "./pages/CheerCompetition";
 import CheerSideline from "./pages/CheerSideline";
-import Privacy from "@/pages/Privacy";
+import Privacy from "./pages/Privacy";
+import AccessibilityStatement from "./pages/AccessibilityStatement";
+import NotFound from "./pages/not-found";
+import { Toaster } from "@/components/ui/toaster";
 
 function Router() {
   return (
@@ -35,6 +38,7 @@ function Router() {
       <Route path="/cheer/competition" component={CheerCompetition} />
       <Route path="/cheer/sideline" component={CheerSideline} />
       <Route path="/privacy" component={Privacy} />
+      <Route path="/accessibility-statement" component={AccessibilityStatement} />
       <Route component={NotFound} />
     </Switch>
   );

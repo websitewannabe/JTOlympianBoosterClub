@@ -87,7 +87,7 @@ const Footer = () => {
           <p>&copy; {new Date().getFullYear()} Olympian Booster Club. All rights reserved.</p>
           <p className="mt-2">
             <Link href="/privacy" className="hover:text-secondary transition-colors">Privacy Policy</Link> | 
-            <Link href="/terms" className="hover:text-secondary transition-colors"> Accessibility Statement</Link>
+            <Link href="/accessibility-statement" className="hover:text-secondary transition-colors"> Accessibility Statement</Link>
           </p>
         </div>
       </div>
