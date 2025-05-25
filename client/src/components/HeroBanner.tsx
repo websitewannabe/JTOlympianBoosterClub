@@ -28,7 +28,7 @@ const HeroBanner = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-[#FF4444] to-[#0094FF] opacity-50 z-10"></div>
       
       <div className="container mx-auto px-4 relative z-20 text-white">
-        <div className="max-w-5xl">
+        <div className="max-w-[1200px] mx-auto">
           {/* Hero Title */}
           <h1 className="old-sport-font text-6xl md:text-8xl mb-6 text-white drop-shadow-lg">
             OLYMPIAN<br/>BOOSTER CLUB
