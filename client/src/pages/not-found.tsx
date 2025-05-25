@@ -88,7 +88,7 @@ export default function NotFound() {
                 <ul className="text-left">
                   <li className="mb-2"><Link href="/" className="text-gray-700 hover:text-[#023FA6]">Home</Link></li>
                   <li className="mb-2"><Link href="/contact" className="text-gray-700 hover:text-[#023FA6]">Contact</Link></li>
-                  <li className="mb-2"><Link href="/privacy" className="text-gray-700 hover:text-[#023FA6]">Privacy Policy</Link></li>
+                  <li className="mb-2"><Link href="/privacy-policy" className="text-gray-700 hover:text-[#023FA6]">Privacy Policy</Link></li>
                 </ul>
               </div>
             </div>

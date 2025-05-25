@@ -33,7 +33,7 @@ function Router() {
       <Route path="/cheer" component={Cheer} />
       <Route path="/competition-cheer" component={CheerCompetition} />
       <Route path="/sideline-cheer" component={CheerSideline} />
-      <Route path="/privacy" component={Privacy} />
+      <Route path="/privacy-policy" component={Privacy} />
       <Route path="/accessibility-statement" component={AccessibilityStatement} />
       <Route component={NotFound} />
     </Switch>
