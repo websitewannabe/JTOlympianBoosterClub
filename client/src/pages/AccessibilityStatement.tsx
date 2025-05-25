@@ -52,35 +52,104 @@ const AccessibilityStatement = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose prose-lg mx-auto">
-            <h2>Our Commitment to Accessibility</h2>
+            <h2>Declaration of Accessibility Introduction</h2>
             <p>
-              Olympian Booster Club is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards.
+              The Internet constitutes the largest resource supporting freedom of information today for the user community in general and for users with disabilities in particular. For that reason we place emphasis on granting equal service to people with disabilities who use information displayed on the website, and on improving their browsing experience. We seek to ensure that our digital services will be accessible to people with disabilities, and accordingly, we have invested in the website.
             </p>
             
-            <h2>Conformance Status</h2>
+            <h3>Using the EqualWeb website accessibility tool</h3>
             <p>
-              The Web Content Accessibility Guidelines (WCAG) defines requirements for designers and developers to improve accessibility for people with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA. Olympian Booster Club is partially conformant with WCAG 2.1 level AA. Partially conformant means that some parts of the content do not fully conform to the accessibility standard.
+              This website employs the Nagich By Click accessibility software and is connected through a special accessibility server. The software complies with Israeli standard SI 5568 at AA level. The software is subject to the manufacturer's Terms of Use. The website owners and/or agents bear the responsibility for the usage and implementation on the website, including the content displayed on the website under the Terms of Use of the Software.
             </p>
             
-            <h2>Feedback</h2>
+            <h3>How does the site's accessibility work?</h3>
             <p>
-              We welcome your feedback on the accessibility of the Olympian Booster Club website. Please let us know if you encounter accessibility barriers:
+              The website features an accessibility menu. A click on the menu makes accessibility buttons available. After selecting a menu item, the user should wait for the page to be loaded.
+            </p>
+            
+            <h3>What are the mean items?</h3>
+            <ul>
+              <li>Option for keyboard-based navigation</li>
+              <li>Adaptation of the website for NVDA assistive technology</li>
+              <li>Enlargement of the font on the website to 4 levels of magnification</li>
+              <li>Immobilization of moving elements, and stoppage of blinking</li>
+              <li>Altered color contrast against dark background</li>
+              <li>Altered color contrast against light background</li>
+              <li>Adaptation for color-blind users</li>
+              <li>Change of font for better readability</li>
+              <li>Enlarged cursor, and change of color to black or white</li>
+              <li>Enlargement of display to ~200%</li>
+              <li>Emphasizing links on the website</li>
+              <li>Emphasizing headings on the website</li>
+              <li>Presentation of alt text to graphics</li>
+              <li>Declaration of accessibility</li>
+              <li>Sending of accessibility feedback</li>
+            </ul>
+            
+            <h3>Clarification</h3>
+            <p>
+              Despite our efforts to apply accessibility to browsing on every webpage, it may be discovered that some of webpages have not yet received accessibility or are not suitable for any available accessibility solution.
+            </p>
+            <p>
+              We are continuing the effort to improve the website's accessibility to the full extent possible, guided by our belief, and by our moral commitment, that the website should be usable by the entire population, including people with disabilities.
+            </p>
+            
+            <h3>Measures to support accessibility</h3>
+            <ul>
+              <li>Include accessibility as a requirement for all web content. Content must meet WCAG 2.1 AA, and should meet AAA as feasible.</li>
+              <li>Assign clear accessibility goals and responsibilities.</li>
+              <li>Ensure content authors have access to accessibility knowledge and skills.</li>
+              <li>Include accessibility as part of our technology mission.</li>
+              <li>Include accessibility throughout our website-related internal policies.</li>
+            </ul>
+            
+            <h3>Conformance status</h3>
+            <p>
+              The Web Content Accessibility Guidelines (WCAG) standard defines requirements to improve accessibility for people with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA. "Fully conforms" means that the content meets all of the WCAG requirements at the specified Level without exceptions. We strive to be/remain fully compliant with an annual review of our website.
+            </p>
+            
+            <h3>Feedback</h3>
+            <p>
+              We welcome your feedback on the accessibility of our website. Please let us know if you encounter accessibility barriers.
+            </p>
+            
+            <h3>Compatibility with browsers and assistive technology</h3>
+            <p>
+              Our website is designed to be compatible with assistive technologies and the last two versions of major browsers.
+            </p>
+            <p>
+              In Internet Explorer 10, 11, and older browsers, some aspects of the website may not display optimally. The website is not designed for Internet Explorer 9 and earlier versions.
+            </p>
+            
+            <h3>Technical specifications</h3>
+            <p>
+              Our website relies upon the following technologies for conformance with WCAG 2.1:
             </p>
             <ul>
-              <li>Email: <a href="mailto:olympianbooster@gmail.com">olympianbooster@gmail.com</a></li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>SVG</li>
             </ul>
             <p>
-              We try to respond to feedback within 3 business days.
+              The following technologies are used to improve accessibility and the user experience for everyone:
+            </p>
+            <ul>
+              <li>JavaScript</li>
+            </ul>
+            
+            <h3>Limitations and alternatives</h3>
+            <p>
+              Several videos on our website use YouTube. As an alternative, the videos are provided as MP4 files on our server.
             </p>
             
-            <h2>Assessment</h2>
+            <h3>Assessment approach</h3>
             <p>
-              Olympian Booster Club assessed the accessibility of this website by self-evaluation and manual testing with assistive technologies.
+              We assess the accessibility of our website by self-evaluation and annual review.
             </p>
             
-            <h2>Date</h2>
+            <h3>Formal approval of this accessibility statement</h3>
             <p>
-              This statement was created on May 25, 2025.
+              This Accessibility Statement is approved by Chris Tierney, Website Wannabe Technology Support.
             </p>
           </div>
         </div>
