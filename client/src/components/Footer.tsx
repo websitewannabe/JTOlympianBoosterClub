@@ -67,16 +67,12 @@ const Footer = () => {
             <h3 className="font-montserrat font-bold text-xl mb-4">CONTACT INFO</h3>
             <ul className="space-y-2">
               <li className="flex items-start">
-                <i className="fas fa-map-marker-alt mt-1 mr-2"></i>
-                <span>Olympian High School<br/>1925 Olympic Parkway<br/>Chula Vista, CA 91915</span>
-              </li>
-              <li className="flex items-start">
                 <i className="fas fa-envelope mt-1 mr-2"></i>
-                <span>info@olympianboosterclub.com</span>
+                <span>olympianbooster@gmail.com</span>
               </li>
               <li className="flex items-start">
-                <i className="fas fa-phone mt-1 mr-2"></i>
-                <span>(619) 555-1234</span>
+                <i className="fas fa-map-marker-alt mt-1 mr-2"></i>
+                <span>Jim Thorpe, PA</span>
               </li>
             </ul>
           </div>
@@ -86,7 +82,7 @@ const Footer = () => {
           <p>&copy; {new Date().getFullYear()} Olympian Booster Club. All rights reserved.</p>
           <p className="mt-2">
             <Link href="/privacy" className="hover:text-secondary transition-colors">Privacy Policy</Link> | 
-            <Link href="/terms" className="hover:text-secondary transition-colors"> Terms of Use</Link>
+            <Link href="/terms" className="hover:text-secondary transition-colors"> Accessibility Statement</Link>
           </p>
         </div>
       </div>
