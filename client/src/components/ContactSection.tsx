@@ -25,9 +25,11 @@ const ContactSection = () => {
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
-      name: "",
+      firstName: "",
+      lastName: "",
       email: "",
-      subject: "",
+      phone: "",
+      sport: "",
       message: "",
     },
   });
@@ -35,13 +37,33 @@ const ContactSection = () => {
   const onSubmit = async (data: ContactFormData) => {
     try {
       setIsSubmitting(true);
+      
+      // Construct form data for Netlify form submission
+      const formData = new FormData();
+      formData.append('form-name', 'contact-form');
+      formData.append('firstName', data.firstName);
+      formData.append('lastName', data.lastName);
+      formData.append('email', data.email);
+      if (data.phone) formData.append('phone', data.phone);
+      formData.append('sport', data.sport);
+      formData.append('message', data.message);
+      
+      // Submit to Netlify
+      await fetch('/', {
+        method: 'POST',
+        body: formData,
+      });
+      
+      // Also submit to our API
       await apiRequest("POST", "/api/contact", data);
+      
       toast({
         title: "Message Sent!",
         description: "Thank you for contacting us. We'll respond as soon as possible.",
       });
       form.reset();
     } catch (error) {
+      console.error("Form submission error:", error);
       toast({
         title: "Error",
         description: "Failed to send your message. Please try again later.",
@@ -69,7 +91,7 @@ const ContactSection = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <FormField
                   control={form.control}
-                  name="name"
+                  name="firstName"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-gray-700 font-semibold">
@@ -90,7 +112,7 @@ const ContactSection = () => {
                 
                 <FormField
                   control={form.control}
-                  name="subject"
+                  name="lastName"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-gray-700 font-semibold">
@@ -132,7 +154,7 @@ const ContactSection = () => {
                 
                 <FormField
                   control={form.control}
-                  name="subject"
+                  name="phone"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-gray-700 font-semibold">Phone</FormLabel>
@@ -151,14 +173,14 @@ const ContactSection = () => {
 
               <FormField
                 control={form.control}
-                name="subject"
+                name="sport"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-gray-700 font-semibold">Which Sport Are You Inquiring About? *</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
-                          <SelectValue placeholder="Football" />
+                          <SelectValue placeholder="Select a sport" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>

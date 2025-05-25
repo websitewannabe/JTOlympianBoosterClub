@@ -143,9 +143,11 @@ export type BoardMember = typeof boardMembers.$inferSelect;
 
 // Contact Form schema (for form validation)
 export const contactFormSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  firstName: z.string().min(2, { message: "First name must be at least 2 characters." }),
+  lastName: z.string().min(2, { message: "Last name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
-  subject: z.string().min(1, { message: "Please select a subject." }),
+  phone: z.string().optional(),
+  sport: z.string().min(1, { message: "Please select a sport." }),
   message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
 
