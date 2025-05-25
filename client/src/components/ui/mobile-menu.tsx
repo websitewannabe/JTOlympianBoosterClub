@@ -105,7 +105,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, onDonateClic
             
             <Link
               href="/contact"
-              className="font-montserrat font-semibold hover:text-[#023FA6] transition-colors py-2 border-b border-lightblue"
+              className="font-montserrat font-semibold hover:text-[#FF4444] transition-colors py-2 border-b border-lightblue"
               onClick={closeMenu}
             >
               CONTACT
