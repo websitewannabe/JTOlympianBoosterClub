@@ -87,8 +87,8 @@ export default function NotFound() {
                 <h3 className="text-xl font-semibold text-[#023FA6] mb-2">Quick Links</h3>
                 <ul className="text-left">
                   <li className="mb-2"><Link href="/" className="text-gray-700 hover:text-[#023FA6]">Home</Link></li>
-                  <li className="mb-2"><Link href="/about" className="text-gray-700 hover:text-[#023FA6]">About Us</Link></li>
                   <li className="mb-2"><Link href="/contact" className="text-gray-700 hover:text-[#023FA6]">Contact</Link></li>
+                  <li className="mb-2"><Link href="/privacy" className="text-gray-700 hover:text-[#023FA6]">Privacy Policy</Link></li>
                 </ul>
               </div>
             </div>

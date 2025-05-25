@@ -10,7 +10,6 @@ import { Helmet } from "react-helmet";
 
 // Pages
 import Home from "./pages/Home";
-import About from "./pages/About";
 import Contact from "./pages/Contact";
 import CrossCountry from "./pages/CrossCountry";
 import Football from "./pages/Football";
@@ -26,7 +25,6 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route path="/cross-country" component={CrossCountry} />
       <Route path="/football" component={Football} />
