@@ -42,7 +42,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary text-white pt-12 pb-6">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-screen-xl">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="flex flex-col items-center md:items-start">
             <div className="mb-4 w-48 px-4">
