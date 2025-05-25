@@ -43,13 +43,11 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="flex flex-col items-center md:items-start">
             <div className="mb-4 w-48">
               <img src={olympianLogo} alt="Olympian Booster Club Logo" className="w-full h-auto" />
             </div>
-            <h3 className="font-montserrat font-bold text-xl mb-2">OLYMPIAN BOOSTER CLUB</h3>
-            <p className="mb-4 text-center md:text-left">Supporting Olympian High School Athletics since 1985.</p>
           </div>
           
           <div>
@@ -63,15 +61,24 @@ const Footer = () => {
           </div>
           
           <div>
+            <h3 className="font-montserrat font-bold text-xl mb-4">SPORTS</h3>
+            <ul className="space-y-2">
+              <li><Link href="/football" className="hover:text-secondary transition-colors">Football</Link></li>
+              <li><Link href="/cross-country" className="hover:text-secondary transition-colors">Cross Country</Link></li>
+              <li><Link href="/girls-volleyball" className="hover:text-secondary transition-colors">Girls Volleyball</Link></li>
+              <li><Link href="/wrestling" className="hover:text-secondary transition-colors">Wrestling</Link></li>
+              <li><Link href="/cheer" className="hover:text-secondary transition-colors">Cheer</Link></li>
+              <li><Link href="/cheer/competition" className="hover:text-secondary transition-colors">Competition Cheer</Link></li>
+              <li><Link href="/cheer/sideline" className="hover:text-secondary transition-colors">Sideline Cheer</Link></li>
+            </ul>
+          </div>
+          
+          <div>
             <h3 className="font-montserrat font-bold text-xl mb-4">CONTACT INFO</h3>
             <ul className="space-y-2">
               <li className="flex items-start">
                 <i className="fas fa-envelope mt-1 mr-2"></i>
                 <span>olympianbooster@gmail.com</span>
-              </li>
-              <li className="flex items-start">
-                <i className="fas fa-map-marker-alt mt-1 mr-2"></i>
-                <span>Jim Thorpe, PA</span>
               </li>
             </ul>
           </div>
