@@ -46,11 +46,11 @@ const SportsRegistrationSection = () => {
   };
 
   return (
-    <section className="py-16 bg-lightgray">
+    <section id="sports-registration" className="py-16 bg-lightgray">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="old-sport-font text-4xl md:text-5xl text-primary mb-8">
+            <h2 id="registration-heading" className="old-sport-font text-4xl md:text-5xl text-primary mb-8">
               SPORTS<br/>REGISTRATION
             </h2>
             
