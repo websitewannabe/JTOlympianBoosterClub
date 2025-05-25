@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "wouter";
 import { Helmet } from "react-helmet";
+import heroImage from "../assets/home_hero.webp";
 
 const AccessibilityStatement = () => {
   const [location] = useLocation();
@@ -27,9 +28,12 @@ const AccessibilityStatement = () => {
 
       {/* Hero Section */}
       <section className="relative h-[50vh] flex items-center justify-center">
-        {/* Background Image - using a gradient as background */}
+        {/* Background Image */}
         <div 
-          className="absolute inset-0 bg-center bg-cover bg-primary" 
+          className="absolute inset-0 bg-center bg-cover" 
+          style={{ 
+            backgroundImage: `url('${heroImage}')` 
+          }}
         ></div>
 
         {/* Gradient overlay */}
