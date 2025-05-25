@@ -88,6 +88,12 @@ const ContactSection = () => {
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-netlify="true" name="contact-form" method="POST">
               <input type="hidden" name="form-name" value="contact-form" />
+              <input type="hidden" name="firstName" />
+              <input type="hidden" name="lastName" />
+              <input type="hidden" name="email" />
+              <input type="hidden" name="phone" />
+              <input type="hidden" name="sport" />
+              <input type="hidden" name="message" />
               <div className="grid md:grid-cols-2 gap-6">
                 <FormField
                   control={form.control}
