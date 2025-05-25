@@ -67,7 +67,6 @@ const Footer = () => {
               <li><Link href="/cross-country" className="hover:text-secondary transition-colors">Cross Country</Link></li>
               <li><Link href="/girls-volleyball" className="hover:text-secondary transition-colors">Girls Volleyball</Link></li>
               <li><Link href="/wrestling" className="hover:text-secondary transition-colors">Wrestling</Link></li>
-              <li><Link href="/cheer" className="hover:text-secondary transition-colors">Cheer</Link></li>
               <li><Link href="/cheer/competition" className="hover:text-secondary transition-colors">Competition Cheer</Link></li>
               <li><Link href="/cheer/sideline" className="hover:text-secondary transition-colors">Sideline Cheer</Link></li>
             </ul>
