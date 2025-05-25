@@ -98,7 +98,7 @@
 
 .active-tab {
   @apply border-b-4;
-  border-color: #0094FF;
+  border-color: #023FA6;
 }
 
 .dropdown:hover .dropdown-menu {
