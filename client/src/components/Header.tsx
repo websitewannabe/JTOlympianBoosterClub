@@ -103,7 +103,7 @@ const Header = () => {
           {/* Donate Button */}
           <button 
             onClick={openDonationPopup}
-            className="ml-6 bg-[#EF4444] text-white font-montserrat font-bold px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors flex items-center"
+            className="ml-6 bg-[#023FA6] text-white font-montserrat font-bold px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors flex items-center"
             aria-label="Donate now"
           >
             <i className="fas fa-heart mr-2"></i>
