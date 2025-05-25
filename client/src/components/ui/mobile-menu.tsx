@@ -33,7 +33,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, onDonateClic
         <div className="p-4">
           <button
             onClick={closeMenu}
-            className="mb-6 text-white hover:text-[#023FA6]"
+            className="mb-6 text-white hover:text-[#FF4444]"
             aria-label="Close menu"
           >
             <i className="fas fa-times text-2xl"></i>
@@ -42,7 +42,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, onDonateClic
           <div className="flex flex-col space-y-3 text-white">
             <Link
               href="/"
-              className="font-montserrat font-semibold hover:text-[#023FA6] transition-colors py-2 border-b border-lightblue"
+              className="font-montserrat font-semibold hover:text-[#FF4444] transition-colors py-2 border-b border-lightblue"
               onClick={closeMenu}
               aria-label="Home"
             >
@@ -53,7 +53,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, onDonateClic
             <div className="py-2 border-b border-lightblue">
               <button
                 onClick={() => setShowCheerSubmenu(!showCheerSubmenu)}
-                className="font-montserrat font-semibold hover:text-[#023FA6] transition-colors flex items-center justify-between w-full"
+                className="font-montserrat font-semibold hover:text-[#FF4444] transition-colors flex items-center justify-between w-full"
               >
                 <span>CHEER</span>
                 <i className={`fas fa-chevron-${showCheerSubmenu ? 'up' : 'down'} text-sm`}></i>
@@ -61,10 +61,10 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, onDonateClic
               
               {showCheerSubmenu && (
                 <div className="mt-2 pl-4 flex flex-col space-y-2">
-                  <Link href="/competition-cheer" className="text-white hover:text-[#023FA6]" onClick={closeMenu}>
+                  <Link href="/competition-cheer" className="text-white hover:text-[#FF4444]" onClick={closeMenu}>
                     Competition Cheer
                   </Link>
-                  <Link href="/sideline-cheer" className="text-white hover:text-[#023FA6]" onClick={closeMenu}>
+                  <Link href="/sideline-cheer" className="text-white hover:text-[#FF4444]" onClick={closeMenu}>
                     Sideline Cheer
                   </Link>
                 </div>
@@ -73,7 +73,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, onDonateClic
             
             <Link
               href="/cross-country"
-              className="font-montserrat font-semibold hover:text-[#023FA6] transition-colors py-2 border-b border-lightblue"
+              className="font-montserrat font-semibold hover:text-[#FF4444] transition-colors py-2 border-b border-lightblue"
               onClick={closeMenu}
             >
               CROSS COUNTRY
@@ -81,7 +81,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, onDonateClic
             
             <Link
               href="/football"
-              className="font-montserrat font-semibold hover:text-[#023FA6] transition-colors py-2 border-b border-lightblue"
+              className="font-montserrat font-semibold hover:text-[#FF4444] transition-colors py-2 border-b border-lightblue"
               onClick={closeMenu}
             >
               FOOTBALL
@@ -89,7 +89,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, onDonateClic
             
             <Link
               href="/girls-volleyball"
-              className="font-montserrat font-semibold hover:text-[#023FA6] transition-colors py-2 border-b border-lightblue"
+              className="font-montserrat font-semibold hover:text-[#FF4444] transition-colors py-2 border-b border-lightblue"
               onClick={closeMenu}
             >
               GIRLS VOLLEYBALL
@@ -97,7 +97,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, onDonateClic
             
             <Link
               href="/wrestling"
-              className="font-montserrat font-semibold hover:text-[#023FA6] transition-colors py-2 border-b border-lightblue"
+              className="font-montserrat font-semibold hover:text-[#FF4444] transition-colors py-2 border-b border-lightblue"
               onClick={closeMenu}
             >
               WRESTLING
