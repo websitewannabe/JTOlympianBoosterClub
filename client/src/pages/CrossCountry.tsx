@@ -51,12 +51,19 @@ const CrossCountry = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center">
-            <Link 
-              href="/membership" 
+            <a 
+              href="#sports-registration" 
               className="bg-red-500 text-white border-2 border-white font-montserrat font-bold py-3 px-8 rounded hover:bg-red-600 transition-colors text-center"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById('sports-registration');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               Register
-            </Link>
+            </a>
             <Link 
               href="/contact" 
               className="bg-transparent text-white border-2 border-white font-montserrat font-bold py-3 px-8 rounded hover:bg-white hover:text-red-600 transition-colors text-center"
