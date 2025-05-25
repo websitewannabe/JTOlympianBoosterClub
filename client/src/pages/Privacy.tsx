@@ -26,12 +26,25 @@ const Privacy = () => {
         <meta name="description" content="Privacy Policy for Olympian Booster Club website, including data collection, cookies, and user rights." />
       </Helmet>
       
-      <div className="pt-20 bg-lightgray">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="font-montserrat font-bold text-4xl text-primary mb-4 text-center">PRIVACY POLICY</h1>
-          <div className="w-20 h-1 bg-secondary mx-auto mb-10"></div>
+      {/* Hero Section */}
+      <section className="relative h-[50vh] flex items-center justify-center">
+        {/* Background Image - using a gradient as background */}
+        <div 
+          className="absolute inset-0 bg-center bg-cover bg-primary" 
+        ></div>
+
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FF4444] to-[#023FA6] opacity-70 z-10"></div>
+
+        <div className="relative z-20 text-center text-white px-4 max-w-4xl pt-[50px]">
+          <h1 className="old-sport-font text-6xl md:text-8xl mb-2 text-white drop-shadow-lg">
+            PRIVACY POLICY
+          </h1>
+          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+            Information about how we collect, use, and protect your data
+          </p>
         </div>
-      </div>
+      </section>
       
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">

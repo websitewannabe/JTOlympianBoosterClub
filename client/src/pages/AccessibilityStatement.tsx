@@ -25,14 +25,23 @@ const AccessibilityStatement = () => {
         <meta name="description" content="Olympian Booster Club is committed to ensuring digital accessibility for people with disabilities." />
       </Helmet>
 
-      <section className="relative h-[40vh] flex items-center justify-center">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary to-darkblue"></div>
-        
+      {/* Hero Section */}
+      <section className="relative h-[50vh] flex items-center justify-center">
+        {/* Background Image - using a gradient as background */}
+        <div 
+          className="absolute inset-0 bg-center bg-cover bg-primary" 
+        ></div>
+
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FF4444] to-[#023FA6] opacity-70 z-10"></div>
+
         <div className="relative z-20 text-center text-white px-4 max-w-4xl pt-[50px]">
-          <h1 className="old-sport-font text-5xl md:text-6xl mb-2 text-white drop-shadow-lg">
-            ACCESSIBILITY STATEMENT
+          <h1 className="old-sport-font text-6xl md:text-8xl mb-2 text-white drop-shadow-lg">
+            ACCESSIBILITY
           </h1>
+          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+            Our commitment to digital accessibility for all users
+          </p>
         </div>
       </section>
 
