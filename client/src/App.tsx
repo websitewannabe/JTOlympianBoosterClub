@@ -21,8 +21,6 @@ import CheerCompetition from "./pages/CheerCompetition";
 import CheerSideline from "./pages/CheerSideline";
 import Privacy from "./pages/Privacy";
 import AccessibilityStatement from "./pages/AccessibilityStatement";
-import NotFound from "./pages/not-found";
-import { Toaster } from "@/components/ui/toaster";
 
 function Router() {
   return (
