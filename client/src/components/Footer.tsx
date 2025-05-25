@@ -45,7 +45,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="flex flex-col items-center md:items-start">
-            <div className="mb-4 w-48">
+            <div className="mb-4 w-48 px-4">
               <img src={olympianLogo} alt="Olympian Booster Club Logo" className="w-full h-auto" />
             </div>
           </div>
