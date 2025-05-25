@@ -55,10 +55,10 @@ const Header = () => {
                 <i className="fas fa-chevron-down ml-1 text-xs"></i>
               </Link>
               <div className="dropdown-menu hidden absolute bg-white shadow-lg rounded mt-1 py-2 w-48 z-20">
-                <Link href="/cheer/competition" className="block px-4 py-2 text-primary hover:text-[#023FA6]">
+                <Link href="/competition-cheer" className="block px-4 py-2 text-primary hover:text-[#023FA6]">
                   Competition Cheer
                 </Link>
-                <Link href="/cheer/sideline" className="block px-4 py-2 text-primary hover:text-[#023FA6]">
+                <Link href="/sideline-cheer" className="block px-4 py-2 text-primary hover:text-[#023FA6]">
                   Sideline Cheer
                 </Link>
               </div>

@@ -33,8 +33,8 @@ function Router() {
       <Route path="/girls-volleyball" component={GirlsVolleyball} />
       <Route path="/wrestling" component={Wrestling} />
       <Route path="/cheer" component={Cheer} />
-      <Route path="/cheer/competition" component={CheerCompetition} />
-      <Route path="/cheer/sideline" component={CheerSideline} />
+      <Route path="/competition-cheer" component={CheerCompetition} />
+      <Route path="/sideline-cheer" component={CheerSideline} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/accessibility-statement" component={AccessibilityStatement} />
       <Route component={NotFound} />
