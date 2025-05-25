@@ -1,0 +1,110 @@
+/* Import fonts for the site */
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom class for Old Sport font styling (using Bebas Neue as fallback) */
+.old-sport-font {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 20%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 20%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 20%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 217 100% 32.5%; /* #0039A6 */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 50.2 100% 50%; /* #FFD700 */
+  --secondary-foreground: 217 100% 32.5%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  
+  --darkblue: 220 100% 23.5%; /* #002A78 */
+  --lightblue: 214 72% 63%; /* #5B92E5 */
+  --lightgray: 0 0% 96.1%; /* #F5F5F5 */
+  --darkgray: 0 0% 20%; /* #333333 */
+  
+  --chart-1: 217 100% 32.5%;
+  --chart-2: 50.2 100% 50%;
+  --chart-3: 214 72% 63%;
+  --chart-4: 220 100% 23.5%;
+  --chart-5: 0 0% 70%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 217 100% 32.5%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 50.2 100% 50%;
+  --secondary-foreground: 217 100% 32.5%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+  
+  --darkblue: 220 100% 23.5%;
+  --lightblue: 214 72% 63%;
+  --lightgray: 240 3.7% 15.9%;
+  --darkgray: 0 0% 98%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    @apply font-bold;
+  }
+}
+
+.sticky-nav {
+  @apply sticky top-0 z-50;
+}
+
+.active-tab {
+  @apply border-b-4;
+  border-color: #0094FF;
+}
+
+.dropdown:hover .dropdown-menu {
+  @apply block;
+}
+
+.event-date {
+  @apply bg-secondary text-primary font-bold text-center p-2 rounded-t-md;
+}
