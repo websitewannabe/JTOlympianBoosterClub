@@ -28,7 +28,7 @@ const Privacy = () => {
       </Helmet>
       
       {/* Hero Section */}
-      <section className="relative h-[50vh] flex items-center justify-center">
+      <section className="relative h-[65vh] md:h-[50vh] flex items-center justify-center">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-center bg-cover" 
