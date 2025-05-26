@@ -188,9 +188,25 @@ const ContactSection = () => {
                       <FormLabel className="text-gray-700 font-semibold">Phone</FormLabel>
                       <FormControl>
                         <Input 
-                          placeholder="Phone" 
+                          placeholder="(555) 123-4567" 
                           {...field} 
                           name="phone"
+                          type="tel"
+                          maxLength={14}
+                          onChange={(e) => {
+                            const value = e.target.value.replace(/\D/g, '');
+                            let formattedValue = '';
+                            if (value.length > 0) {
+                              formattedValue = `(${value.slice(0, 3)}`;
+                              if (value.length >= 4) {
+                                formattedValue += `) ${value.slice(3, 6)}`;
+                                if (value.length >= 7) {
+                                  formattedValue += `-${value.slice(6, 10)}`;
+                                }
+                              }
+                            }
+                            field.onChange(formattedValue);
+                          }}
                           className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                         />
                       </FormControl>
