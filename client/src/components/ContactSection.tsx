@@ -214,6 +214,7 @@ const ContactSection = () => {
                         placeholder="Please let us know what's on your mind. Have a question for us? Ask away."
                         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary min-h-[120px]"
                         {...field}
+                        name="message"
                       />
                     </FormControl>
                     <div className="text-sm text-gray-500 mt-1">
