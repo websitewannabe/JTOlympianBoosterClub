@@ -88,7 +88,7 @@ const ContactSection = () => {
         
         <div className="max-w-2xl mx-auto">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-netlify="true" name="contact-form" method="POST">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-netlify="true" name="contact-form" method="POST" action="/">
               <input type="hidden" name="form-name" value="contact-form" />
               <div className="grid md:grid-cols-2 gap-6">
                 <FormField
