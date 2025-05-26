@@ -37,16 +37,33 @@ const ContactSection = () => {
   const onSubmit = async (data: ContactFormData) => {
     try {
       setIsSubmitting(true);
-      console.log("Submitting form data:", data);
       
-      // Submit to our API
-      await apiRequest("POST", "/api/contact", data);
+      // Create form data for Netlify
+      const formData = new FormData();
+      formData.append('form-name', 'contact-form');
+      formData.append('firstName', data.firstName);
+      formData.append('lastName', data.lastName);
+      formData.append('email', data.email);
+      if (data.phone) formData.append('phone', data.phone);
+      formData.append('sport', data.sport);
+      formData.append('message', data.message);
       
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for contacting us. We'll respond as soon as possible.",
+      // Submit to Netlify
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString()
       });
-      form.reset();
+      
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for contacting us. We'll respond as soon as possible.",
+        });
+        form.reset();
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
       console.error("Form submission error:", error);
       toast({
@@ -71,7 +88,8 @@ const ContactSection = () => {
         
         <div className="max-w-2xl mx-auto">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-netlify="true" name="contact-form" method="POST">
+              <input type="hidden" name="form-name" value="contact-form" />
               <div className="grid md:grid-cols-2 gap-6">
                 <FormField
                   control={form.control}
@@ -86,6 +104,7 @@ const ContactSection = () => {
                         <Input 
                           placeholder="First" 
                           {...field} 
+                          name="firstName"
                           className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                         />
                       </FormControl>
@@ -107,6 +126,7 @@ const ContactSection = () => {
                         <Input 
                           placeholder="Last" 
                           {...field} 
+                          name="lastName"
                           className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                         />
                       </FormControl>
@@ -128,6 +148,7 @@ const ContactSection = () => {
                           type="email"
                           placeholder="Email" 
                           {...field} 
+                          name="email"
                           className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                         />
                       </FormControl>
@@ -146,6 +167,7 @@ const ContactSection = () => {
                         <Input 
                           placeholder="Phone" 
                           {...field} 
+                          name="phone"
                           className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                         />
                       </FormControl>
@@ -161,7 +183,7 @@ const ContactSection = () => {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-gray-700 font-semibold">Which Sport Are You Inquiring About? *</FormLabel>
-                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <Select onValueChange={field.onChange} defaultValue={field.value} name="sport">
                       <FormControl>
                         <SelectTrigger className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
                           <SelectValue placeholder="Select a sport" />
