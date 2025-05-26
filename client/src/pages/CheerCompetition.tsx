@@ -25,7 +25,7 @@ const CheerCompetition = () => {
     <>
       <Helmet>
         <title>Competition Cheer - Olympian Booster Club</title>
-        <meta name="description" content="Join our competition cheer program for high-level athletic performance and competitive excellence. Register today!" />
+        <meta name="description" content="Olympian High School competition cheerleading team competes at regional and state levels. Join our elite cheer squad for advanced stunts, tumbling, and championship competitions." />
       </Helmet>
 
       {/* Hero Section */}
