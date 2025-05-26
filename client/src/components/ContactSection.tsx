@@ -37,24 +37,9 @@ const ContactSection = () => {
   const onSubmit = async (data: ContactFormData) => {
     try {
       setIsSubmitting(true);
+      console.log("Submitting form data:", data);
       
-      // Construct form data for Netlify form submission
-      const formData = new FormData();
-      formData.append('form-name', 'contact-form');
-      formData.append('firstName', data.firstName);
-      formData.append('lastName', data.lastName);
-      formData.append('email', data.email);
-      if (data.phone) formData.append('phone', data.phone);
-      formData.append('sport', data.sport);
-      formData.append('message', data.message);
-      
-      // Submit to Netlify
-      await fetch('/', {
-        method: 'POST',
-        body: formData,
-      });
-      
-      // Also submit to our API
+      // Submit to our API
       await apiRequest("POST", "/api/contact", data);
       
       toast({
@@ -86,14 +71,7 @@ const ContactSection = () => {
         
         <div className="max-w-2xl mx-auto">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-netlify="true" name="contact-form" method="POST">
-              <input type="hidden" name="form-name" value="contact-form" />
-              <input type="hidden" name="firstName" />
-              <input type="hidden" name="lastName" />
-              <input type="hidden" name="email" />
-              <input type="hidden" name="phone" />
-              <input type="hidden" name="sport" />
-              <input type="hidden" name="message" />
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <FormField
                   control={form.control}
