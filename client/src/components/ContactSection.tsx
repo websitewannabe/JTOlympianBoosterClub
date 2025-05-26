@@ -20,6 +20,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
 
   const form = useForm<ContactFormData>({
@@ -56,6 +57,7 @@ const ContactSection = () => {
       });
       
       if (response.ok) {
+        setIsSubmitted(true);
         toast({
           title: "Message Sent!",
           description: "Thank you for contacting us. We'll respond as soon as possible.",
@@ -87,10 +89,31 @@ const ContactSection = () => {
         </div>
         
         <div className="max-w-2xl mx-auto">
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-netlify="true" name="contact-form" method="POST" action="/">
-              <input type="hidden" name="form-name" value="contact-form" />
-              <div className="grid md:grid-cols-2 gap-6">
+          {isSubmitted ? (
+            <div className="text-center py-12">
+              <div className="bg-green-50 border border-green-200 rounded-lg p-8 mb-6">
+                <div className="flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mx-auto mb-4">
+                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-green-800 mb-2">Message Sent Successfully!</h3>
+                <p className="text-green-700 mb-4">
+                  Thank you for contacting the Olympian Booster Club. We've received your message and will respond as soon as possible.
+                </p>
+                <Button 
+                  onClick={() => setIsSubmitted(false)}
+                  className="bg-[#023FA6] hover:bg-[#012f84] text-white"
+                >
+                  Send Another Message
+                </Button>
+              </div>
+            </div>
+          ) : (
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-netlify="true" name="contact-form" method="POST" action="/">
+                <input type="hidden" name="form-name" value="contact-form" />
+                <div className="grid md:grid-cols-2 gap-6">
                 <FormField
                   control={form.control}
                   name="firstName"
@@ -234,8 +257,9 @@ const ContactSection = () => {
                   {isSubmitting ? "Sending..." : "Submit"}
                 </Button>
               </div>
-            </form>
-          </Form>
+              </form>
+            </Form>
+          )}
         </div>
       </div>
     </section>
