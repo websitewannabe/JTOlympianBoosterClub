@@ -25,7 +25,7 @@ const CrossCountry = () => {
     <>
       <Helmet>
         <title>Cross Country - Olympian Booster Club</title>
-        <meta name="description" content="Join our cross country program for fun, friendly competition, and building healthy habits. Register today!" />
+        <meta name="description" content="Discover Olympian High School cross country running program. Join our dedicated team of distance runners and experience the thrill of competitive cross country racing." />
       </Helmet>
 
       {/* Hero Section */}

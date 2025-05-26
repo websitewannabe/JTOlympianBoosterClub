@@ -25,7 +25,7 @@ const GirlsVolleyball = () => {
     <>
       <Helmet>
         <title>Girls Volleyball - Olympian Booster Club</title>
-        <meta name="description" content="Join our girls volleyball program for competitive play, skill development, and team spirit. Register today!" />
+        <meta name="description" content="Support Olympian High School girls volleyball team. Learn about our dynamic volleyball program, tournament schedules, and how to cheer on our talented female athletes." />
       </Helmet>
 
       {/* Hero Section */}

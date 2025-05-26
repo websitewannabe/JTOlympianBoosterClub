@@ -25,7 +25,7 @@ const Football = () => {
     <>
       <Helmet>
         <title>Football - Olympian Booster Club</title>
-        <meta name="description" content="Join our football program for competitive play, teamwork, and athletic excellence. Register today!" />
+        <meta name="description" content="Support Olympian High School football with the Booster Club. Learn about our varsity football team, game schedules, and how to get involved in supporting our student athletes." />
       </Helmet>
 
       {/* Hero Section */}

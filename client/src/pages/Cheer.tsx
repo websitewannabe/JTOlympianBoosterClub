@@ -25,7 +25,7 @@ const Cheer = () => {
     <>
       <Helmet>
         <title>Cheer - Olympian Booster Club</title>
-        <meta name="description" content="Join our cheer program for spirit, athleticism, and team pride. Register today!" />
+        <meta name="description" content="Join Olympian High School cheerleading teams. Discover our competitive cheer and sideline programs that build school spirit, athleticism, and lifelong friendships." />
       </Helmet>
 
       {/* Hero Section */}

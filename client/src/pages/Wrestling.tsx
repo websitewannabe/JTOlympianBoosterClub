@@ -25,7 +25,7 @@ const Wrestling = () => {
     <>
       <Helmet>
         <title>Wrestling - Olympian Booster Club</title>
-        <meta name="description" content="Join our wrestling program for strength, discipline, and competitive excellence. Register today!" />
+        <meta name="description" content="Experience Olympian High School wrestling excellence. Join our wrestling team for strength training, competitive matches, and championship opportunities in scholastic wrestling." />
       </Helmet>
 
       {/* Hero Section */}
