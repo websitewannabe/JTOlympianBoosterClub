@@ -38,10 +38,19 @@
   <body>
     <div id="root"></div>
     <form name="contact-form" netlify netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name" />
+      <input type="text" name="firstName" />
+      <input type="text" name="lastName" />
       <input type="email" name="email" />
       <input type="tel" name="phone" />
-      <input type="text" name="sport" />
+      <select name="sport">
+        <option value="">Select a sport</option>
+        <option value="football">Football</option>
+        <option value="cheer">Cheer</option>
+        <option value="cross-country">Cross Country</option>
+        <option value="girls-volleyball">Girls Volleyball</option>
+        <option value="wrestling">Wrestling</option>
+        <option value="general">General Inquiry</option>
+      </select>
       <textarea name="message"></textarea>
     </form>
     <script type="module" src="/src/main.tsx"></script>
