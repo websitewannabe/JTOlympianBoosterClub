@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import DonationPopup from "./DonationPopup";
 import americanLegionLogo from "../assets/american_legion.webp";
@@ -6,6 +5,11 @@ import valleyAthleticSupplyLogo from "../assets/valley_athletic_supply.webp";
 import pennForestLogo1 from "../assets/penn_forest_plaza1.webp";
 import pennForestLogo2 from "../assets/penn_forest_plaza2.webp";
 import scoopsLogo from "../assets/903_scoops.webp";
+
+// Placeholder for OptimizedImage component
+const OptimizedImage = ({ src, alt, width, height, quality, format, fit, className }) => {
+  return <img src={src} alt={alt} width={width} height={height} className={className} style={{objectFit: fit}}/>;
+};
 
 const SponsorsSection = () => {
   const [isDonationPopupOpen, setIsDonationPopupOpen] = useState(false);
@@ -53,7 +57,7 @@ const SponsorsSection = () => {
               A Special Thank You To Our Sponsors! Please visit our sponsors by clicking on their logos!
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto justify-items-center">
             {sponsors.map((sponsor, index) => (
               <div key={index} className="text-center flex flex-col items-center">
@@ -63,9 +67,14 @@ const SponsorsSection = () => {
                   rel="noopener noreferrer" 
                   className="block w-full h-40 rounded-lg mb-3 hover:shadow-lg transition-shadow"
                 >
-                  <img 
+                  <OptimizedImage 
                     src={sponsor.logo} 
                     alt={sponsor.name}
+                    width={200}
+                    height={80}
+                    quality={90}
+                    format="webp"
+                    fit="contain"
                     className="w-full h-full object-contain p-3"
                   />
                 </a>
@@ -77,7 +86,7 @@ const SponsorsSection = () => {
           </div>
         </div>
       </section>
-      
+
       <DonationPopup isOpen={isDonationPopupOpen} onClose={closeDonationPopup} />
     </>
   );

@@ -11,7 +11,7 @@ const Footer = () => {
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!email) {
       toast({
         title: "Error",
@@ -20,7 +20,7 @@ const Footer = () => {
       });
       return;
     }
-    
+
     try {
       setIsSubmitting(true);
       await apiRequest('POST', '/api/subscribe', { email });
@@ -51,7 +51,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          
+
           <div>
             <h3 className="font-montserrat font-bold text-xl mb-4">QUICK LINKS</h3>
             <ul className="space-y-2">
@@ -59,7 +59,7 @@ const Footer = () => {
               <li><Link href="/contact" className="hover:text-[#FF4444] transition-colors">Contact</Link></li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="font-montserrat font-bold text-xl mb-4">SPORTS</h3>
             <ul className="space-y-2">
@@ -71,7 +71,7 @@ const Footer = () => {
               <li><Link href="/sideline-cheer" className="hover:text-[#FF4444] transition-colors">Sideline Cheer</Link></li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="font-montserrat font-bold text-xl mb-4">CONTACT INFO</h3>
             <ul className="space-y-2">
@@ -82,7 +82,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="border-t border-lightblue pt-6 text-center text-sm">
           <p>&copy; {new Date().getFullYear()} Olympian Booster Club. All rights reserved.</p>
           <p className="mt-2">

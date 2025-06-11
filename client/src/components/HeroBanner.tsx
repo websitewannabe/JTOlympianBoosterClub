@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { useState } from "react";
 import DonationPopup from "./DonationPopup";
+import OptimizedImage from "./ui/optimized-image";
 import heroImage from "../assets/home_hero.webp";
 
 const HeroBanner = () => {
@@ -15,14 +16,18 @@ const HeroBanner = () => {
   };
 
   return (
-    <section id="home" className="relative h-screen flex items-center">
+    <section id="home" className="relative h-screen flex items-center overflow-hidden">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-center bg-cover" 
-        style={{ 
-          backgroundImage: `url('${heroImage}')` 
-        }}
-      ></div>
+      <OptimizedImage
+        src={heroImage}
+        alt="Olympian High School Athletics"
+        width={1920}
+        height={1080}
+        quality={85}
+        format="webp"
+        fit="cover"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
       
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#FF4444] to-[#023FA6] opacity-50 z-10"></div>
