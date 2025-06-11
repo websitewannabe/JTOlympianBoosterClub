@@ -44,7 +44,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     );
   }
 
-  // Build Netlify Image CDN URL
+  // Check if we're in production (Netlify) or development (Replit)
+  const isProduction = import.meta.env.PROD;
+  
+  // Build Netlify Image CDN URL for production
   const buildNetlifyImageUrl = () => {
     const params = new URLSearchParams();
     
@@ -61,7 +64,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     return `/.netlify/images?url=${encodeURIComponent(`/${cleanSrc}`)}&${params.toString()}`;
   };
 
-  const optimizedSrc = buildNetlifyImageUrl();
+  // Use Netlify CDN in production, original src in development
+  const optimizedSrc = isProduction ? buildNetlifyImageUrl() : src;
 
   return (
     <img
