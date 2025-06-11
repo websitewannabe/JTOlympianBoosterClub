@@ -25,9 +25,59 @@ const Football = () => {
   return (
     <>
       <Helmet>
-        <title>Football - Olympian Booster Club</title>
-        <meta name="description" content="Support Olympian High School football with the Booster Club. Learn about our varsity football team, game schedules, and how to get involved in supporting our student athletes." />
-      </Helmet>
+        <link rel="canonical" href="https://olympianboosterclub.com/football" />
+        <title>Football | Olympian Booster Club Youth Football in Carbon County, PA</title>
+        <meta
+          name="description"
+          content="Building champions through teamwork, discipline, and competitive excellence on the gridiron with Olympian Booster Club's youth football program in Carbon County, PA."
+        />
+        <meta
+          name="keywords"
+          content="youth football, kids football league, Carbon County football, youth sports, football registration, gridiron training, Olympian Booster Club"
+        />
+
+        {/* Open Graph metadata */}
+        <meta property="og:title" content="Olympian Booster Club Football | Youth Football in Carbon County, PA" />
+        <meta property="og:description" content="Join the Olympian Booster Club youth football program for skill-building, sportsmanship, and competitive play in Carbon County." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://olympianboosterclub.com/football" />
+        <meta property="og:image" content="https://olympianboosterclub.com/images/home_hero.webp" />
+
+        {/* Structured Data (JSON-LD) */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Olympian Booster Club",
+            url: "https://olympianboosterclub.com/football",
+            image: "https://olympianboosterclub.com/images/home_hero.webp",
+            logo: "https://olympianboosterclub.com/images/olympian-logo.png",
+            description:
+              "The Olympian Booster Club's youth football program empowers kids through teamwork, fitness, and competitive league play across Carbon County, PA.",
+            openingHours: "Mo-Fr 09:00-17:00",
+            areaServed: {
+              "@type": "Place",
+              name: [
+                "Jim Thorpe",
+                "Lehighton",
+                "Nesquehoning",
+                "Palmerton",
+                "Weatherly",
+                "Summit Hill",
+                "Lansford",
+                "Beaver Meadows",
+              ],
+            },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Olympian Booster Club Football Program",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Youth Foo
+
 
       {/* Hero Section */}
       <section className="relative h-[65vh] md:h-[50vh] flex items-center justify-center overflow-hidden">

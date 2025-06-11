@@ -24,8 +24,69 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - Olympian Booster Club</title>
-        <meta name="description" content="Contact the Olympian Booster Club with your questions or to get involved. Reach out to us by phone, email, or using our contact form." />
+        <link rel="canonical" href="https://olympianboosterclub.com/contact" />
+        <title>Contact Us | Olympian Booster Club in Carbon County, PA</title>
+        <meta
+          name="description"
+          content="Have a question or want to get involved? Reach out to Olympian Booster Club in Carbon County, PA. Use our contact form and our team will respond promptly."
+        />
+        <meta
+          name="keywords"
+          content="Olympian Booster Club contact, Carbon County youth sports contact, get involved booster club, cheer football volleyball wrestling contact"
+        />
+
+        {/* Open Graph metadata */}
+        <meta
+          property="og:title"
+          content="Contact Olympian Booster Club | Youth Sports in Carbon County, PA"
+        />
+        <meta
+          property="og:description"
+          content="Send us a message and learn more about youth sports programs with the Olympian Booster Club. We're here to help!"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://olympianboosterclub.com/contact"
+        />
+        <meta
+          property="og:image"
+          content="https://olympianboosterclub.com/images/home_hero.webp"
+        />
+
+        {/* Structured Data (JSON-LD) */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Olympian Booster Club",
+            url: "https://olympianboosterclub.com/contact",
+            image: "https://olympianboosterclub.com/images/home_hero.webp",
+            logo: "https://olympianboosterclub.com/images/olympian-logo.png",
+            description:
+              "Contact the Olympian Booster Club with questions or to learn how to get involved in youth sports across Carbon County, PA.",
+            openingHours: "Mo-Fr 09:00-17:00",
+            areaServed: {
+              "@type": "Place",
+              name: [
+                "Jim Thorpe",
+                "Lehighton",
+                "Nesquehoning",
+                "Palmerton",
+                "Weatherly",
+                "Summit Hill",
+                "Lansford",
+                "Beaver Meadows",
+              ],
+            },
+            contactPoint: {
+              "@type": "ContactPoint",
+              contactType: "Customer Service",
+              email: "olympianbooster@gmail.com",
+              availableLanguage: "English",
+            },
+          })}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
@@ -50,15 +111,14 @@ const Contact = () => {
             CONTACT US
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto">
-            Please feel free to fill out our contact form below and one of our volunteers will reach back out to you as soon as we can.
+            Please feel free to fill out our contact form below and one of our
+            volunteers will reach back out to you as soon as we can.
           </p>
         </div>
       </section>
 
       {/* Contact Form Section */}
       <ContactSection />
-      
-      
     </>
   );
 };
