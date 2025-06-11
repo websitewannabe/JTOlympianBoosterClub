@@ -7,8 +7,49 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Olympian Booster Club - Supporting Student Athletes Since 1985</title>
-        <meta name="description" content="The Olympian Booster Club supports and enhances the athletic experience for all Olympian High School student-athletes through fundraising, volunteerism, and community engagement." />
+        <link rel="canonical" href="https://olympianboosterclub.com/" />
+        <title>
+          Olympian Booster Club | Youth Sports & Community in Jim Thorpe, PA
+        </title>
+        <meta
+          name="description"
+          content="The Olympian Booster Club supports youth athletics in Jim Thorpe, PA, offering programs in football, cheerleading, wrestling, volleyball, and cross country for grades K–6."
+        />
+        <meta
+          name="keywords"
+          content="youth sports, Jim Thorpe PA, football, cheerleading, wrestling, volleyball, cross country, booster club, community sports, youth athletics"
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SportsOrganization",
+            name: "Olympian Booster Club",
+            url: "https://olympianboosterclub.com",
+            logo: "https://olympianboosterclub.com/logo.png",
+            description:
+              "The Olympian Booster Club supports youth athletics in Jim Thorpe, PA, offering programs in football, cheerleading, wrestling, volleyball, and cross country for grades K–6.",
+            email: "olympianbooster@gmail.com",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Jim Thorpe",
+              addressRegion: "PA",
+              postalCode: "18229",
+              addressCountry: "US",
+            },
+            foundingDate: "1985",
+            areaServed: {
+              "@type": "Place",
+              name: "Jim Thorpe, PA",
+            },
+            sport: [
+              "Football",
+              "Cheerleading",
+              "Wrestling",
+              "Volleyball",
+              "Cross Country",
+            ],
+          })}
+        </script>
       </Helmet>
 
       <HeroBanner />
