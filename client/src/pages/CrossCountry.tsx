@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useLocation, Link } from "wouter";
 import { Helmet } from "react-helmet";
 import SportsRegistrationSection from "@/components/SportsRegistrationSection";
+import OptimizedImage from "@/components/ui/optimized-image";
 import crossCountryImage from "../assets/crosscountry.webp";
 
 const CrossCountry = () => {
@@ -29,14 +30,18 @@ const CrossCountry = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative h-[65vh] md:h-[50vh] flex items-center justify-center">
+      <section className="relative h-[65vh] md:h-[50vh] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-center bg-cover" 
-          style={{ 
-            backgroundImage: `url('${crossCountryImage}')` 
-          }}
-        ></div>
+        <OptimizedImage
+          src={crossCountryImage}
+          alt="Olympian High School Cross Country"
+          width={1920}
+          height={1080}
+          quality={85}
+          format="webp"
+          fit="cover"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
 
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#FF4444] to-[#023FA6] opacity-70 z-10"></div>

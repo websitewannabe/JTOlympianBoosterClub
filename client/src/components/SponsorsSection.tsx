@@ -1,15 +1,11 @@
 import { useState } from "react";
 import DonationPopup from "./DonationPopup";
+import OptimizedImage from "./ui/optimized-image";
 import americanLegionLogo from "../assets/american_legion.webp";
 import valleyAthleticSupplyLogo from "../assets/valley_athletic_supply.webp";
 import pennForestLogo1 from "../assets/penn_forest_plaza1.webp";
 import pennForestLogo2 from "../assets/penn_forest_plaza2.webp";
 import scoopsLogo from "../assets/903_scoops.webp";
-
-// Placeholder for OptimizedImage component
-const OptimizedImage = ({ src, alt, width, height, quality, format, fit, className }) => {
-  return <img src={src} alt={alt} width={width} height={height} className={className} style={{objectFit: fit}}/>;
-};
 
 const SponsorsSection = () => {
   const [isDonationPopupOpen, setIsDonationPopupOpen] = useState(false);

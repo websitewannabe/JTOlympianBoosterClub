@@ -2,14 +2,20 @@ import { Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import { BoardMember } from "@shared/schema";
 import { Skeleton } from "@/components/ui/skeleton";
+import OptimizedImage from "@/components/ui/optimized-image";
 
 const BoardMemberCard = ({ member }: { member: BoardMember }) => {
   return (
     <div className="text-center">
       <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4">
-        <img 
+        <OptimizedImage 
           src={member.imageUrl} 
-          alt={`${member.name}, ${member.position}`} 
+          alt={`${member.name}, ${member.position}`}
+          width={256}
+          height={256}
+          quality={85}
+          format="webp"
+          fit="cover"
           className="w-full h-full object-cover"
         />
       </div>

@@ -4,6 +4,7 @@ import { GalleryImage } from "@shared/schema";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import OptimizedImage from "@/components/ui/optimized-image";
 
 const GalleryItem = ({ image }: { image: GalleryImage }) => {
   const [open, setOpen] = useState(false);
@@ -14,9 +15,14 @@ const GalleryItem = ({ image }: { image: GalleryImage }) => {
         className="overflow-hidden rounded-lg shadow-sm cursor-pointer" 
         onClick={() => setOpen(true)}
       >
-        <img 
+        <OptimizedImage 
           src={image.thumbnailUrl} 
-          alt={image.alt} 
+          alt={image.alt}
+          width={400}
+          height={300}
+          quality={85}
+          format="webp"
+          fit="cover"
           className="w-full h-48 object-cover hover:scale-110 transition-transform duration-300"
         />
       </div>
@@ -24,9 +30,14 @@ const GalleryItem = ({ image }: { image: GalleryImage }) => {
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-3xl">
           <div className="p-2">
-            <img 
+            <OptimizedImage 
               src={image.fullUrl} 
-              alt={image.alt} 
+              alt={image.alt}
+              width={1200}
+              height={800}
+              quality={90}
+              format="webp"
+              fit="contain"
               className="w-full object-contain max-h-[70vh]"
             />
             {image.caption && (
