@@ -99,8 +99,8 @@ const Header = () => {
             </Link>
 
             <Link 
-              href="/contact" 
-              className={`font-montserrat font-semibold hover:text-[#023FA6] transition-colors ${activeTab === "/contact" ? "active-tab" : ""}`}
+              href="/contact-us" 
+              className={`font-montserrat font-semibold hover:text-[#023FA6] transition-colors ${activeTab === "/contact-us" ? "active-tab" : ""}`}
             >
               CONTACT
             </Link>

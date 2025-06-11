@@ -56,7 +56,7 @@ export default function NotFound() {
               Back to Home
             </Link>
             <Link 
-              href="/contact" 
+              href="/contact-us" 
               className="bg-transparent text-white border-2 border-white font-montserrat font-bold py-3 px-8 rounded hover:bg-white hover:text-red-600 transition-colors text-center"
             >
               Contact Us
@@ -87,7 +87,7 @@ export default function NotFound() {
                 <h3 className="text-xl font-semibold text-[#023FA6] mb-2">Quick Links</h3>
                 <ul className="text-left">
                   <li className="mb-2"><Link href="/" className="text-gray-700 hover:text-[#023FA6]">Home</Link></li>
-                  <li className="mb-2"><Link href="/contact" className="text-gray-700 hover:text-[#023FA6]">Contact</Link></li>
+                  <li className="mb-2"><Link href="/contact-us" className="text-gray-700 hover:text-[#023FA6]">Contact</Link></li>
                   <li className="mb-2"><Link href="/privacy-policy" className="text-gray-700 hover:text-[#023FA6]">Privacy Policy</Link></li>
                 </ul>
               </div>

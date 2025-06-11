@@ -24,7 +24,7 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://olympianboosterclub.com/contact" />
+        <link rel="canonical" href="https://olympianboosterclub.com/contact-us" />
         <title>Contact Us | Olympian Booster Club in Carbon County, PA</title>
         <meta
           name="description"
@@ -47,7 +47,7 @@ const Contact = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://olympianboosterclub.com/contact"
+          content="https://olympianboosterclub.com/contact-us"
         />
         <meta
           property="og:image"
@@ -60,7 +60,7 @@ const Contact = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Olympian Booster Club",
-            url: "https://olympianboosterclub.com/contact",
+            url: "https://olympianboosterclub.com/contact-us",
             image: "https://olympianboosterclub.com/images/home_hero.webp",
             logo: "https://olympianboosterclub.com/images/olympian-logo.png",
             description:

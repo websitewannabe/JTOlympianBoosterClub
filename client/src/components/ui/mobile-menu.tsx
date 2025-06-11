@@ -14,7 +14,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, onDonateClic
     setIsOpen(false);
     setShowCheerSubmenu(false);
   };
-  
+
   const handleDonateClick = () => {
     closeMenu();
     if (onDonateClick) {
@@ -38,7 +38,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, onDonateClic
           >
             <i className="fas fa-times text-2xl"></i>
           </button>
-          
+
           <div className="flex flex-col space-y-3 text-white">
             <Link
               href="/"
@@ -49,7 +49,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, onDonateClic
               <i className="fas fa-home text-lg mr-2"></i>
               HOME
             </Link>
-            
+
             <div className="py-2 border-b border-lightblue">
               <button
                 onClick={() => setShowCheerSubmenu(!showCheerSubmenu)}
@@ -58,7 +58,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, onDonateClic
                 <span>CHEER</span>
                 <i className={`fas fa-chevron-${showCheerSubmenu ? 'up' : 'down'} text-sm`}></i>
               </button>
-              
+
               {showCheerSubmenu && (
                 <div className="mt-2 pl-4 flex flex-col space-y-2">
                   <Link href="/competition-cheer" className="text-white hover:text-[#FF4444]" onClick={closeMenu}>
@@ -70,7 +70,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, onDonateClic
                 </div>
               )}
             </div>
-            
+
             <Link
               href="/cross-country"
               className="font-montserrat font-semibold hover:text-[#FF4444] transition-colors py-2 border-b border-lightblue"
@@ -78,7 +78,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, onDonateClic
             >
               CROSS COUNTRY
             </Link>
-            
+
             <Link
               href="/football"
               className="font-montserrat font-semibold hover:text-[#FF4444] transition-colors py-2 border-b border-lightblue"
@@ -86,7 +86,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, onDonateClic
             >
               FOOTBALL
             </Link>
-            
+
             <Link
               href="/girls-volleyball"
               className="font-montserrat font-semibold hover:text-[#FF4444] transition-colors py-2 border-b border-lightblue"
@@ -94,7 +94,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, onDonateClic
             >
               GIRLS VOLLEYBALL
             </Link>
-            
+
             <Link
               href="/wrestling"
               className="font-montserrat font-semibold hover:text-[#FF4444] transition-colors py-2 border-b border-lightblue"
@@ -102,15 +102,15 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, onDonateClic
             >
               WRESTLING
             </Link>
-            
+
             <Link
-              href="/contact"
+              href="/contact-us"
               className="font-montserrat font-semibold hover:text-[#FF4444] transition-colors py-2 border-b border-lightblue"
               onClick={closeMenu}
             >
               CONTACT
             </Link>
-            
+
             {/* Donate Button */}
             <button
               onClick={handleDonateClick}
