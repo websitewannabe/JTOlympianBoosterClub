@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import MobileMenu from "./ui/mobile-menu";
 import logoImage from "../assets/olympian-logo.png";
 import DonationPopup from "./DonationPopup";
-import OptimizedImage from "./OptimizedImage"; // Added import for OptimizedImage
+import OptimizedImage from "./ui/optimized-image";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
