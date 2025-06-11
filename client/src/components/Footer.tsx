@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { useState } from "react";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
+import OptimizedImage from "./ui/optimized-image";
 import olympianLogo from "../assets/olympian-logo.png";
 
 const Footer = () => {
@@ -47,7 +48,16 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start">
             <div className="mb-4 w-48 px-4">
               <Link href="/" onClick={() => window.scrollTo(0, 0)}>
-                <img src={olympianLogo} alt="Olympian Booster Club Logo" className="w-full h-auto cursor-pointer hover:opacity-80 transition-opacity" />
+                <OptimizedImage 
+                  src={olympianLogo} 
+                  alt="Olympian Booster Club Logo" 
+                  width={192}
+                  height={120}
+                  quality={90}
+                  format="webp"
+                  fit="contain"
+                  className="w-full h-auto cursor-pointer hover:opacity-80 transition-opacity" 
+                />
               </Link>
             </div>
           </div>
