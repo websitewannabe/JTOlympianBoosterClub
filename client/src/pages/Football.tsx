@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { useLocation, Link } from "wouter";
 import { Helmet } from "react-helmet";
@@ -24,9 +23,12 @@ const Football = () => {
 
   return (
     <>
+      x
       <Helmet>
         <link rel="canonical" href="https://olympianboosterclub.com/football" />
-        <title>Football | Olympian Booster Club Youth Football in Carbon County, PA</title>
+        <title>
+          Football | Olympian Booster Club Youth Football in Carbon County, PA
+        </title>
         <meta
           name="description"
           content="Building champions through teamwork, discipline, and competitive excellence on the gridiron with Olympian Booster Club's youth football program in Carbon County, PA."
@@ -37,11 +39,23 @@ const Football = () => {
         />
 
         {/* Open Graph metadata */}
-        <meta property="og:title" content="Olympian Booster Club Football | Youth Football in Carbon County, PA" />
-        <meta property="og:description" content="Join the Olympian Booster Club youth football program for skill-building, sportsmanship, and competitive play in Carbon County." />
+        <meta
+          property="og:title"
+          content="Olympian Booster Club Football | Youth Football in Carbon County, PA"
+        />
+        <meta
+          property="og:description"
+          content="Join the Olympian Booster Club youth football program for skill-building, sportsmanship, and competitive play in Carbon County."
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://olympianboosterclub.com/football" />
-        <meta property="og:image" content="https://olympianboosterclub.com/images/home_hero.webp" />
+        <meta
+          property="og:url"
+          content="https://olympianboosterclub.com/football"
+        />
+        <meta
+          property="og:image"
+          content="https://olympianboosterclub.com/images/home_hero.webp"
+        />
 
         {/* Structured Data (JSON-LD) */}
         <script type="application/ld+json">
@@ -76,9 +90,21 @@ const Football = () => {
                   "@type": "Offer",
                   itemOffered: {
                     "@type": "Service",
-                    name: "Youth Foo
-
-
+                    name: "Youth Football",
+                    description:
+                      "Structured tackle football league with coaching, training, and games for youth athletes.",
+                    priceSpecification: {
+                      "@type": "PriceSpecification",
+                      priceCurrency: "USD",
+                      price: "75.00",
+                    },
+                  },
+                },
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
       {/* Hero Section */}
       <section className="relative h-[65vh] md:h-[50vh] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
@@ -101,26 +127,27 @@ const Football = () => {
             FOOTBALL
           </h1>
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-            Building champions through teamwork, discipline, and competitive excellence on the gridiron.
+            Building champions through teamwork, discipline, and competitive
+            excellence on the gridiron.
           </p>
-          
+
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center">
-            <a 
-              href="#sports-registration" 
+            <a
+              href="#sports-registration"
               className="bg-red-500 text-white border-2 border-white font-montserrat font-bold py-3 px-8 rounded hover:bg-red-600 transition-colors text-center"
               onClick={(e) => {
                 e.preventDefault();
-                const element = document.getElementById('sports-registration');
+                const element = document.getElementById("sports-registration");
                 if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
+                  element.scrollIntoView({ behavior: "smooth" });
                 }
               }}
             >
               Register
             </a>
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="bg-transparent text-white border-2 border-white font-montserrat font-bold py-3 px-8 rounded hover:bg-white hover:text-red-600 transition-colors text-center"
             >
               Contact Us
@@ -128,7 +155,6 @@ const Football = () => {
           </div>
         </div>
       </section>
-
       {/* Sports Registration Section */}
       <SportsRegistrationSection />
     </>
