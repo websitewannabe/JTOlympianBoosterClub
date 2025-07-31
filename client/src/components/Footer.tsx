@@ -8,6 +8,7 @@ import olympianLogo from "../assets/olympian-logo.png";
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const loadAccessibilityTools = () => {
     // Check if already loaded to prevent multiple loads
@@ -19,66 +20,83 @@ const Footer = () => {
       return;
     }
 
-    // Configure EqualWeb settings
-    window.interdeal = {
-      get sitekey() { return "01c6d0d9029914e951f8fe7cf7bab245" },
-      get domains() {
-        return {
-          "js": "https://cdn.equalweb.com/",
-          "acc": "https://access.equalweb.com/"
-        }
-      },
-      "Position": "left",
-      "Menulang": "EN",
-      "draggable": true,
-      "btnStyle": {
-        "vPosition": [
-          "80%",
-          "80%"
-        ],
-        "margin": [
-          "0",
-          "0"
-        ],
-        "scale": [
-          "0.5",
-          "0.5"
-        ],
-        "color": {
-          "main": "#e6051f",
-          "second": "#ffffff"
+    try {
+      // Configure EqualWeb settings
+      window.interdeal = {
+        get sitekey() { return "01c6d0d9029914e951f8fe7cf7bab245" },
+        get domains() {
+          return {
+            "js": "https://cdn.equalweb.com/",
+            "acc": "https://access.equalweb.com/"
+          }
         },
-        "icon": {
-          "outline": false,
-          "outlineColor": "#ffffff",
-          "type": 12,
-          "shape": "semicircle"
-        }
-      },
-      "showTooltip": true
-    };
+        "Position": "left",
+        "Menulang": "EN",
+        "draggable": true,
+        "btnStyle": {
+          "vPosition": [
+            "80%",
+            "80%"
+          ],
+          "margin": [
+            "0",
+            "0"
+          ],
+          "scale": [
+            "0.5",
+            "0.5"
+          ],
+          "color": {
+            "main": "#e6051f",
+            "second": "#ffffff"
+          },
+          "icon": {
+            "outline": false,
+            "outlineColor": "#ffffff",
+            "type": 12,
+            "shape": "semicircle"
+          }
+        },
+        "showTooltip": true
+      };
 
-    // Dynamically load the EqualWeb script
-    const script = document.createElement('script');
-    script.src = window.interdeal.domains.js + 'core/5.1.15/accessibility.js';
-    script.defer = true;
-    script.integrity = 'sha512-IuFBhiBlQSJQU8muh9DCDRAPPfo0jqX3OXD7fBvmzPt7K0InWtrkQ662YgJWeG5zSu94WoonZn61uUUDII00eA==';
-    script.crossOrigin = 'anonymous';
-    script.setAttribute('data-cfasync', 'true');
-    
-    // Add event listener to open panel once script loads
-    script.onload = () => {
-      // Small delay to ensure the widget is fully initialized
-      setTimeout(() => {
-        if (window.interdeal && window.interdeal.open) {
-          window.interdeal.open();
-        }
-      }, 500);
-    };
+      // Dynamically load the EqualWeb script
+      const script = document.createElement('script');
+      script.src = window.interdeal.domains.js + 'core/5.1.15/accessibility.js';
+      script.defer = true;
+      script.crossOrigin = 'anonymous';
+      script.setAttribute('data-cfasync', 'true');
+      
+      // Add event listener to open panel once script loads
+      script.onload = () => {
+        // Small delay to ensure the widget is fully initialized
+        setTimeout(() => {
+          if (window.interdeal && typeof window.interdeal.open === 'function') {
+            window.interdeal.open();
+          }
+        }, 1000);
+      };
 
-    document.body.appendChild(script);
+      // Add error handling
+      script.onerror = () => {
+        console.warn('EqualWeb accessibility script failed to load');
+        toast({
+          title: "Accessibility Tools",
+          description: "Unable to load accessibility tools. Please try again later.",
+          variant: "destructive"
+        });
+      };
+
+      document.body.appendChild(script);
+    } catch (error) {
+      console.error('Error initializing accessibility tools:', error);
+      toast({
+        title: "Accessibility Tools",
+        description: "Unable to initialize accessibility tools.",
+        variant: "destructive"
+      });
+    }
   };
-  const { toast } = useToast();
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
