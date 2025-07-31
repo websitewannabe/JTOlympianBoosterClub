@@ -151,7 +151,7 @@ const CrossCountry = () => {
               Register
             </a>
             <Link
-              href="/contact"
+              href="/contact-us"
               className="bg-transparent text-white border-2 border-white font-montserrat font-bold py-3 px-8 rounded hover:bg-white hover:text-red-600 transition-colors text-center"
             >
               Contact Us

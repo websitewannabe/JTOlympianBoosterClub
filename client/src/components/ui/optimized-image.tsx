@@ -44,7 +44,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     );
   }
 
-  // Check if we're in production (Netlify) or development (Replit)
+  // Check if we're in production (Netlify) or development
   const isProduction = import.meta.env.PROD;
   
   // Build Netlify Image CDN URL for production

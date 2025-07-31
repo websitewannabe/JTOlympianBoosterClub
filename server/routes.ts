@@ -7,8 +7,26 @@ import {
   newsletterSchema
 } from "@shared/schema";
 import { ZodError } from "zod";
+import path from "path";
+import fs from "fs";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Serve sitemap.xml specifically to avoid catch-all interference
+  app.get("/sitemap.xml", (req, res) => {
+    const sitemapPath = path.resolve(import.meta.dirname, "..", "client", "public", "sitemap.xml");
+    
+    if (fs.existsSync(sitemapPath)) {
+      res.set({
+        'Content-Type': 'application/xml',
+        'X-Content-Type-Options': 'nosniff',
+        'Referrer-Policy': 'strict-origin-when-cross-origin'
+      });
+      res.sendFile(sitemapPath);
+    } else {
+      res.status(404).send('Sitemap not found');
+    }
+  });
+
   // prefix all routes with /api
   
   // News routes
