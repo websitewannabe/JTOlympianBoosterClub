@@ -8,6 +8,12 @@
   NODE_VERSION = "20"
 
 [[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
@@ -15,6 +21,9 @@
 
 [build.processing]
   skip_processing = false
+
+[build.processing.sitemap]
+  skip = true
 
 [build.processing.css]
   bundle = true
