@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation, Link } from "wouter";
 import { Helmet } from "react-helmet";
 import SportsRegistrationSection from "@/components/SportsRegistrationSection";
+import CheerImageGallery from "@/components/CheerImageGallery";
 import OptimizedImage from "@/components/ui/optimized-image";
 import sidelineCheerImage from "../assets/sideline_cheer.webp";
 
@@ -257,6 +258,9 @@ const CheerSideline = () => {
           </div>
         </div>
       </section>
+      
+      {/* Sideline Cheer Image Gallery */}
+      <CheerImageGallery />
       
       {/* Sports Registration Section */}
       <SportsRegistrationSection />

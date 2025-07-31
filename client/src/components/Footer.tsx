@@ -178,7 +178,7 @@ const Footer = () => {
         <div className="border-t border-lightblue pt-6 text-center text-sm">
           <p>&copy; {new Date().getFullYear()} Olympian Booster Club. All rights reserved.</p>
           <p className="mt-2">
-            <Link href="/sitemap.xml" className="hover:text-[#FF4444] transition-colors">Sitemap</Link> | 
+            <a href="/sitemap.xml" className="hover:text-[#FF4444] transition-colors">Sitemap</a> | 
             <Link href="/privacy-policy" className="hover:text-[#FF4444] transition-colors"> Privacy Policy</Link> | 
             <Link href="/accessibility-statement" className="hover:text-[#FF4444] transition-colors"> Accessibility Statement</Link>
           </p>

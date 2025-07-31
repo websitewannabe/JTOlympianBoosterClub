@@ -1,7 +1,8 @@
 
 [build]
   publish = "dist/public"
-  command = "npm run build"
+  command = "vite build"
+  base = "."
 
 [build.environment]
   NODE_VERSION = "20"
@@ -10,6 +11,7 @@
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
 
 [build.processing]
   skip_processing = false

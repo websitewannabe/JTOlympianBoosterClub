@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation, Link } from "wouter";
 import { Helmet } from "react-helmet";
 import SportsRegistrationSection from "@/components/SportsRegistrationSection";
+import FootballImageGallery from "@/components/FootballImageGallery";
 import OptimizedImage from "@/components/ui/optimized-image";
 import ChampionshipPromoPopup from "@/components/ChampionshipPromoPopup";
 import DonationPopup from "@/components/DonationPopup";
@@ -265,6 +266,9 @@ const Football = () => {
           </div>
         </div>
       </section>
+      
+      {/* Football Image Gallery */}
+      <FootballImageGallery />
       
       {/* Sports Registration Section */}
       <SportsRegistrationSection />
