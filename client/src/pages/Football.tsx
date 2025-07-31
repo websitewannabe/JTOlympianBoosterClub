@@ -6,7 +6,7 @@ import FootballImageGallery from "@/components/FootballImageGallery";
 import OptimizedImage from "@/components/ui/optimized-image";
 import ChampionshipPromoPopup from "@/components/ChampionshipPromoPopup";
 import DonationPopup from "@/components/DonationPopup";
-import footballImage from "../assets/football.webp";
+import footballImage from "../assets/JT Football Images/dsc01729_54116363726_o.jpg";
 import champsImage from "../assets/JT Football Images/209-champs_54081763157_o.jpg";
 
 const Football = () => {
@@ -165,7 +165,7 @@ const Football = () => {
         {/* Background Image */}
         <OptimizedImage
           src={footballImage}
-          alt="Olympian High School Football"
+          alt="Olympian Football player in action during championship game"
           width={1920}
           height={1080}
           quality={85}
