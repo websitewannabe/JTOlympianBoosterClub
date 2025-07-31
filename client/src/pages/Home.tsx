@@ -12,17 +12,26 @@ const Home = () => {
   const [isPromoPopupOpen, setIsPromoPopupOpen] = useState(false);
   const [isDonationPopupOpen, setIsDonationPopupOpen] = useState(false);
 
-  // Show promo popup after 7 seconds
+  // Show promo popup after 7 seconds, but only once per visit
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsPromoPopupOpen(true);
-    }, 7000); // 7 seconds
+    // Check if popup has already been shown during this session
+    const hasShownPromoPopup = sessionStorage.getItem('olympian-promo-popup-shown');
+    
+    if (!hasShownPromoPopup) {
+      const timer = setTimeout(() => {
+        setIsPromoPopupOpen(true);
+        // Mark popup as shown for this session
+        sessionStorage.setItem('olympian-promo-popup-shown', 'true');
+      }, 7000); // 7 seconds
 
-    return () => clearTimeout(timer);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   const closePromoPopup = () => {
     setIsPromoPopupOpen(false);
+    // Mark popup as shown for this session when manually closed
+    sessionStorage.setItem('olympian-promo-popup-shown', 'true');
   };
 
   const openDonationPopup = () => {
