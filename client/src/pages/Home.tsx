@@ -1,9 +1,38 @@
+import { useState, useEffect } from "react";
 import HeroBanner from "@/components/HeroBanner";
 import SponsorsSection from "@/components/SponsorsSection";
 import SportsRegistrationSection from "@/components/SportsRegistrationSection";
+import OptimizedImage from "@/components/ui/optimized-image";
+import ChampionshipPromoPopup from "@/components/ChampionshipPromoPopup";
+import DonationPopup from "@/components/DonationPopup";
 import { Helmet } from "react-helmet";
+import champsImage from "../assets/JT Football Images/209-champs_54081763157_o.jpg";
 
 const Home = () => {
+  const [isPromoPopupOpen, setIsPromoPopupOpen] = useState(false);
+  const [isDonationPopupOpen, setIsDonationPopupOpen] = useState(false);
+
+  // Show promo popup after 7 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsPromoPopupOpen(true);
+    }, 7000); // 7 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const closePromoPopup = () => {
+    setIsPromoPopupOpen(false);
+  };
+
+  const openDonationPopup = () => {
+    setIsDonationPopupOpen(true);
+  };
+
+  const closeDonationPopup = () => {
+    setIsDonationPopupOpen(false);
+  };
+
   return (
     <>
       <Helmet>
@@ -53,8 +82,45 @@ const Home = () => {
       </Helmet>
 
       <HeroBanner />
+      
+      {/* Championship Hero Section */}
+      <section className="relative py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="old-sport-font text-4xl md:text-5xl text-primary mb-6">
+              2024 CHAMPIONS
+            </h2>
+            <div className="w-32 h-1 bg-secondary mx-auto mb-8"></div>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Celebrating our champions and the spirit of excellence that defines Olympian football.
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="overflow-hidden rounded-xl shadow-2xl">
+              <OptimizedImage
+                src={champsImage}
+                alt="Olympian Football Champions"
+                width={1200}
+                height={800}
+                quality={90}
+                format="webp"
+                fit="contain"
+                className="w-full h-auto max-h-[500px] md:max-h-[600px] object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <SponsorsSection />
       <SportsRegistrationSection />
+      
+      {/* Championship Promo Popup */}
+      <ChampionshipPromoPopup isOpen={isPromoPopupOpen} onClose={closePromoPopup} onDonateClick={openDonationPopup} />
+      
+      {/* Donation Popup */}
+      <DonationPopup isOpen={isDonationPopupOpen} onClose={closeDonationPopup} />
     </>
   );
 };
