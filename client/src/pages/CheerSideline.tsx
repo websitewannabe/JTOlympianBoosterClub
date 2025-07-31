@@ -2,10 +2,8 @@ import { useEffect, useState } from "react";
 import { useLocation, Link } from "wouter";
 import { Helmet } from "react-helmet";
 import SportsRegistrationSection from "@/components/SportsRegistrationSection";
-import CheerImageGallery from "@/components/CheerImageGallery";
 import OptimizedImage from "@/components/ui/optimized-image";
 import sidelineCheerImage from "../assets/sideline_cheer.webp";
-import cheerHeroImage from "../assets/JT Sideline Cheer Images/dsc08405_54082120920_o.jpg";
 
 const CheerSideline = () => {
   const [location] = useLocation();
@@ -220,7 +218,7 @@ const CheerSideline = () => {
           <div className="max-w-4xl mx-auto">
             <div className="overflow-hidden rounded-xl shadow-2xl">
               <OptimizedImage
-                src={cheerHeroImage}
+                src={sidelineCheerImage}
                 alt="Olympian Sideline Cheer Spirit"
                 width={1200}
                 height={800}
@@ -259,9 +257,6 @@ const CheerSideline = () => {
           </div>
         </div>
       </section>
-      
-      {/* Sideline Cheer Image Gallery */}
-      <CheerImageGallery />
       
       {/* Sports Registration Section */}
       <SportsRegistrationSection />
