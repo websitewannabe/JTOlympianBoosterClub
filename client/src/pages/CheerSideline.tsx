@@ -4,7 +4,8 @@ import { Helmet } from "react-helmet";
 import SportsRegistrationSection from "@/components/SportsRegistrationSection";
 import CheerImageGallery from "@/components/CheerImageGallery";
 import OptimizedImage from "@/components/ui/optimized-image";
-import sidelineCheerImage from "../assets/sideline_cheer.webp";
+// Use specific cheer image from the gallery
+const sidelineCheerImage = "/assets/JT Sideline Cheer Images/dsc08405_54082120920_o.jpg";
 
 const CheerSideline = () => {
   const [location] = useLocation();

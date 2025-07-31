@@ -27,6 +27,19 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Serve static assets specifically to avoid catch-all interference
+  app.get("/assets/*", (req, res) => {
+    // Remove leading slash from req.path and resolve correctly
+    const relativePath = req.path.startsWith('/') ? req.path.substring(1) : req.path;
+    const assetPath = path.resolve(import.meta.dirname, "..", "client", "public", relativePath);
+    
+    if (fs.existsSync(assetPath)) {
+      res.sendFile(assetPath);
+    } else {
+      res.status(404).send('Asset not found');
+    }
+  });
+
   // prefix all routes with /api
   
   // News routes
