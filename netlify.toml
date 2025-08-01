@@ -4,6 +4,27 @@
   command = "vite build"
   base = "."
 
+# Enable prerendering for better SEO and social media sharing
+[[plugins]]
+  package = "@netlify/plugin-prerender-spa"
+
+  [plugins.inputs]
+    # Prerender these routes for social media crawlers
+    routes = [
+      "/",
+      "/football",
+      "/cheer", 
+      "/competition-cheer",
+      "/sideline-cheer",
+      "/cross-country",
+      "/wrestling",
+      "/girls-volleyball",
+      "/contact-us",
+      "/about",
+      "/privacy-policy",
+      "/accessibility-statement"
+    ]
+
 [build.environment]
   NODE_VERSION = "20"
 
