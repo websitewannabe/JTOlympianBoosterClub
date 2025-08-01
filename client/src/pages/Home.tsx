@@ -58,24 +58,7 @@ const Home = () => {
           content="youth sports, Jim Thorpe PA, football, cheerleading, wrestling, volleyball, cross country, booster club, community sports, youth athletics"
         />
         
-        {/* Open Graph metadata */}
-        <meta property="og:title" content="Olympian Booster Club | Youth Sports & Community in Jim Thorpe, PA" />
-        <meta property="og:description" content="Supporting youth athletics in Jim Thorpe, PA with programs in football, cheerleading, wrestling, volleyball, and cross country for grades K–6." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://olympianboosterclub.com/" />
-        <meta property="og:image" content="https://olympianboosterclub.com/og-home.png" />
-        <meta property="og:image:width" content="512" />
-        <meta property="og:image:height" content="512" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:alt" content="Olympian Booster Club - Youth Sports in Jim Thorpe, PA" />
-        <meta property="og:site_name" content="Olympian Booster Club" />
-        
-        {/* Twitter Card metadata */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Olympian Booster Club | Youth Sports & Community in Jim Thorpe, PA" />
-        <meta name="twitter:description" content="Supporting youth athletics in Jim Thorpe, PA with programs in football, cheerleading, wrestling, volleyball, and cross country for grades K–6." />
-        <meta name="twitter:image" content="https://olympianboosterclub.com/og-home.png" />
-        <meta name="twitter:image:alt" content="Olympian Booster Club - Youth Sports in Jim Thorpe, PA" />
+
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
