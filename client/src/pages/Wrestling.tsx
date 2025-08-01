@@ -56,7 +56,7 @@ const Wrestling = () => {
         />
         <meta
           property="og:image"
-          content="https://olympianboosterclub.com/images/home_hero.webp"
+          content="https://olympianboosterclub.com/wrestling.webp"
         />
 
         {/* Structured Data (JSON-LD) */}

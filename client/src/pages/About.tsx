@@ -23,8 +23,17 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Us - Olympian Booster Club</title>
-        <meta name="description" content="Learn about the Olympian Booster Club's mission, board members, and policies to support student athletes at Olympian High School." />
+        <link rel="canonical" href="https://olympianboosterclub.com/about" />
+        <title>About Us | Olympian Booster Club - Supporting Youth Athletics Since 1985</title>
+        <meta name="description" content="Learn about the Olympian Booster Club's mission, board members, and 40-year history supporting youth athletics in Jim Thorpe and Carbon County, PA since 1985." />
+        <meta name="keywords" content="Olympian Booster Club about, youth sports history, Carbon County booster club, athletic support organization, board members" />
+        
+        {/* Open Graph metadata */}
+        <meta property="og:title" content="About Us | Olympian Booster Club - Supporting Youth Athletics Since 1985" />
+        <meta property="og:description" content="Learn about the Olympian Booster Club's mission, board members, and 40-year history supporting youth athletics in Jim Thorpe and Carbon County, PA since 1985." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://olympianboosterclub.com/about" />
+        <meta property="og:image" content="https://olympianboosterclub.com/olympian-logo.png" />
       </Helmet>
       
       <div className="pt-10 bg-lightgray">

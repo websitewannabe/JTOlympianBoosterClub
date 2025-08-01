@@ -51,12 +51,19 @@ const Home = () => {
         </title>
         <meta
           name="description"
-          content="The Olympian Booster Club supports youth athletics in Jim Thorpe, PA, offering programs in football, cheerleading, wrestling, volleyball, and cross country for grades K–6."
+          content="Supporting youth athletics in Jim Thorpe, PA with programs in football, cheerleading, wrestling, volleyball, and cross country for grades K–6."
         />
         <meta
           name="keywords"
           content="youth sports, Jim Thorpe PA, football, cheerleading, wrestling, volleyball, cross country, booster club, community sports, youth athletics"
         />
+        
+        {/* Open Graph metadata */}
+        <meta property="og:title" content="Olympian Booster Club | Youth Sports & Community in Jim Thorpe, PA" />
+        <meta property="og:description" content="Supporting youth athletics in Jim Thorpe, PA with programs in football, cheerleading, wrestling, volleyball, and cross country for grades K–6." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://olympianboosterclub.com/" />
+        <meta property="og:image" content="https://olympianboosterclub.com/home_hero.webp" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

@@ -22,8 +22,17 @@ const AccessibilityStatement = () => {
   return (
     <>
       <Helmet>
-        <title>Accessibility Statement - Olympian Booster Club</title>
-        <meta name="description" content="Olympian Booster Club is committed to ensuring digital accessibility for people with disabilities." />
+        <link rel="canonical" href="https://olympianboosterclub.com/accessibility-statement" />
+        <title>Accessibility Statement | Olympian Booster Club - Digital Accessibility Commitment</title>
+        <meta name="description" content="Olympian Booster Club's commitment to digital accessibility, WCAG 2.1 compliance, and ensuring our website is usable by people with disabilities." />
+        <meta name="keywords" content="accessibility statement, digital accessibility, WCAG compliance, disability access, inclusive design, web accessibility" />
+        
+        {/* Open Graph metadata */}
+        <meta property="og:title" content="Accessibility Statement | Olympian Booster Club - Digital Accessibility Commitment" />
+        <meta property="og:description" content="Olympian Booster Club's commitment to digital accessibility, WCAG 2.1 compliance, and ensuring our website is usable by people with disabilities." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://olympianboosterclub.com/accessibility-statement" />
+        <meta property="og:image" content="https://olympianboosterclub.com/olympian-logo.png" />
       </Helmet>
 
       {/* Hero Section */}

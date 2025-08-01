@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Block Netlify image optimization URLs from being indexed
+Disallow: /.netlify/images*
+
+# Block zip file downloads from direct indexing
+Disallow: /assets/*.zip
+
+Sitemap: https://olympianboosterclub.com/sitemap.xml

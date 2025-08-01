@@ -57,7 +57,7 @@ const GirlsVolleyball = () => {
         />
         <meta
           property="og:image"
-          content="https://olympianboosterclub.com/images/home_hero.webp"
+          content="https://olympianboosterclub.com/girls_volleyball.webp"
         />
 
         {/* Structured Data (JSON-LD) */}

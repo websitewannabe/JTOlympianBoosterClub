@@ -86,7 +86,7 @@ const Football = () => {
         </title>
         <meta
           name="description"
-          content="Building champions through teamwork, discipline, and competitive excellence on the gridiron with Olympian Booster Club's youth football program in Carbon County, PA."
+          content="Building champions through teamwork, discipline, and competitive excellence with Olympian Booster Club's youth football program in Carbon County, PA."
         />
         <meta
           name="keywords"
@@ -109,7 +109,7 @@ const Football = () => {
         />
         <meta
           property="og:image"
-          content="https://olympianboosterclub.com/images/home_hero.webp"
+          content="https://olympianboosterclub.com/football.webp"
         />
 
         {/* Structured Data (JSON-LD) */}

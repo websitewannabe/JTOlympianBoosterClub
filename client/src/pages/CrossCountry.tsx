@@ -57,7 +57,7 @@ const CrossCountry = () => {
         />
         <meta
           property="og:image"
-          content="https://olympianboosterclub.com/images/home_hero.webp"
+          content="https://olympianboosterclub.com/crosscountry.webp"
         />
 
         {/* Structured Data (JSON-LD) */}

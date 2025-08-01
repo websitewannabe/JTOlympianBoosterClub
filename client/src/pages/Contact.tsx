@@ -51,7 +51,7 @@ const Contact = () => {
         />
         <meta
           property="og:image"
-          content="https://olympianboosterclub.com/images/home_hero.webp"
+          content="https://olympianboosterclub.com/home_hero.webp"
         />
 
         {/* Structured Data (JSON-LD) */}

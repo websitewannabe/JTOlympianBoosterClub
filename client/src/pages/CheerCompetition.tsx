@@ -29,11 +29,11 @@ const CheerCompetition = () => {
           href="https://olympianboosterclub.com/competition-cheer"
         />
         <title>
-          Cheerleading | Olympian Booster Club Youth Cheer in Carbon County, PA
+          Competition Cheer | Olympian Booster Club Youth Competition Cheerleading in Carbon County, PA
         </title>
         <meta
           name="description"
-          content="Spreading spirit, pride, and athletic excellence through youth cheerleading in Carbon County, PA. Join the Olympian Booster Club's cheer program today."
+          content="Elite athletic training and competitive cheerleading excellence for youth athletes in Carbon County, PA. Join Olympian Booster Club's competition cheer program today."
         />
         <meta
           name="keywords"
@@ -56,7 +56,7 @@ const CheerCompetition = () => {
         />
         <meta
           property="og:image"
-          content="https://olympianboosterclub.com/images/home_hero.webp"
+          content="https://olympianboosterclub.com/competition_cheer.webp"
         />
 
         {/* Structured Data (JSON-LD) */}

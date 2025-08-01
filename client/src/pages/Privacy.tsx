@@ -23,8 +23,17 @@ const Privacy = () => {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy - Olympian Booster Club</title>
-        <meta name="description" content="Privacy Policy for Olympian Booster Club website, including data collection, cookies, and user rights." />
+        <link rel="canonical" href="https://olympianboosterclub.com/privacy-policy" />
+        <title>Privacy Policy | Olympian Booster Club - Data Protection & Privacy</title>
+        <meta name="description" content="Olympian Booster Club privacy policy outlining data collection, cookies, user rights, and our commitment to protecting your personal information." />
+        <meta name="keywords" content="privacy policy, data protection, cookies, user rights, personal information, Olympian Booster Club" />
+        
+        {/* Open Graph metadata */}
+        <meta property="og:title" content="Privacy Policy | Olympian Booster Club - Data Protection & Privacy" />
+        <meta property="og:description" content="Olympian Booster Club privacy policy outlining data collection, cookies, user rights, and our commitment to protecting your personal information." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://olympianboosterclub.com/privacy-policy" />
+        <meta property="og:image" content="https://olympianboosterclub.com/olympian-logo.png" />
       </Helmet>
       
       {/* Hero Section */}

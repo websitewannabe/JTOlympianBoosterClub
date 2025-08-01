@@ -45,8 +45,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Helmet>
-          <title>Olympian Booster Club</title>
-          <meta name="description" content="The Olympian Booster Club supports and enhances the athletic experience for all Olympian High School student-athletes through fundraising, volunteerism, and community engagement." />
+          <html lang="en" />
         </Helmet>
         <div className="flex flex-col min-h-screen">
           <Header />
