@@ -49,12 +49,8 @@ const ContactSection = () => {
     setTimeout(() => {
       document.body.removeChild(iframe);
       
-      // Show success message
+      // Show success message (no toast needed - we have built-in success UI)
       setIsSubmitted(true);
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for contacting us. We'll respond as soon as possible.",
-      });
       
       // Reset the form
       form.reset();
