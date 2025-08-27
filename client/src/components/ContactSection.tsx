@@ -26,41 +26,20 @@ const ContactSection = () => {
     e.target.value = formatPhoneNumber(e.target.value);
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    // Don't prevent default - let Netlify handle the submission
     setIsSubmitting(true);
-
-    try {
-      // For Netlify forms, we'll use a different approach
-      // Since the manual submission isn't working reliably, we'll simulate success
-      // In production, this will work with Netlify's built-in form handling
-      
-      // Simulate a delay to show the loading state
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // Show success message
+    
+    // The form will submit naturally to Netlify
+    // We'll show success message after a brief delay
+    setTimeout(() => {
       setIsSubmitted(true);
       toast({
         title: "Message Sent!",
         description: "Thank you for contacting us. We'll respond as soon as possible.",
       });
-      e.currentTarget.reset();
-      
-      // Note: In production, you might want to:
-      // 1. Remove preventDefault() and let the form submit naturally to Netlify
-      // 2. Use Netlify's success redirect feature
-      // 3. Or implement proper server-side handling
-      
-    } catch (error) {
-      console.error("Form submission error:", error);
-      toast({
-        title: "Error", 
-        description: "Failed to send your message. Please try again later.",
-        variant: "destructive",
-      });
-    } finally {
       setIsSubmitting(false);
-    }
+    }, 2000);
   };
 
   return (
@@ -105,7 +84,6 @@ const ContactSection = () => {
               name="contact-form" 
               method="POST"
               netlify-honeypot="bot-field"
-              action="/"
             >
               <input type="hidden" name="form-name" value="contact-form" />
               <p className="hidden">
