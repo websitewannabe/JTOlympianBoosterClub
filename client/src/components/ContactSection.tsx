@@ -31,23 +31,31 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
+      // For Netlify forms, we need to submit the form data properly
       const formData = new FormData(e.currentTarget);
       
-      const response = await fetch('/', {
+      // Submit to our Netlify function
+      const response = await fetch('/.netlify/functions/contact-form', {
         method: 'POST',
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData as any).toString()
       });
 
+      // Check if the submission was successful
       if (response.ok) {
-        setIsSubmitted(true);
-        toast({
-          title: "Message Sent!",
-          description: "Thank you for contacting us. We'll respond as soon as possible.",
-        });
-        e.currentTarget.reset();
+        const result = await response.json();
+        if (result.success) {
+          setIsSubmitted(true);
+          toast({
+            title: "Message Sent!",
+            description: "Thank you for contacting us. We'll respond as soon as possible.",
+          });
+          e.currentTarget.reset();
+        } else {
+          throw new Error(result.error || 'Form submission failed');
+        }
       } else {
-        throw new Error('Form submission failed');
+        throw new Error(`Form submission failed with status: ${response.status}`);
       }
     } catch (error) {
       console.error("Form submission error:", error);
