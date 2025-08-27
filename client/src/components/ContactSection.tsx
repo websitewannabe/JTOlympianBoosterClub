@@ -27,19 +27,40 @@ const ContactSection = () => {
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    // Don't prevent default - let Netlify handle the submission
+    e.preventDefault(); // Prevent the default form submission
     setIsSubmitting(true);
-    
-    // The form will submit naturally to Netlify
-    // We'll show success message after a brief delay
+
+    // Create a hidden iframe to submit the form to Netlify
+    // This prevents page redirect while still submitting to Netlify
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.name = 'netlify-form-submission';
+    document.body.appendChild(iframe);
+
+    // Set the form target to the iframe
+    const form = e.currentTarget;
+    const originalTarget = form.target;
+    form.target = 'netlify-form-submission';
+
+    // Submit the form
+    form.submit();
+
+    // Clean up the iframe after submission
     setTimeout(() => {
+      document.body.removeChild(iframe);
+      
+      // Show success message
       setIsSubmitted(true);
       toast({
         title: "Message Sent!",
         description: "Thank you for contacting us. We'll respond as soon as possible.",
       });
+      
+      // Reset the form
+      form.reset();
+      form.target = originalTarget;
       setIsSubmitting(false);
-    }, 2000);
+    }, 1500);
   };
 
   return (
