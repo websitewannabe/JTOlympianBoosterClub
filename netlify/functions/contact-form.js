@@ -27,11 +27,7 @@ exports.handler = async function(event, context) {
       };
     }
     
-    // Here you would typically:
-    // 1. Save to a database
-    // 2. Send an email notification
-    // 3. Log the submission
-    
+    // Log the submission
     console.log('Contact form submission:', {
       firstName,
       lastName,
