@@ -74,7 +74,7 @@ const ChatWidget = () => {
       <button
         onClick={() => setIsOpen(!isOpen)}
         aria-label={isOpen ? "Close chat" : "Open chat assistant"}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#0039A6] text-white shadow-lg hover:bg-[#002A78] transition-all duration-200 flex items-center justify-center border border-[#EF4345]"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#EF4345] text-white shadow-lg hover:bg-[#d93a3c] transition-all duration-200 flex items-center justify-center border border-white"
       >
         {isOpen ? (
           <svg
