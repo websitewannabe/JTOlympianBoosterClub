@@ -21,6 +21,7 @@ import CheerSideline from "./pages/CheerSideline";
 import Privacy from "./pages/Privacy";
 import AccessibilityStatement from "./pages/AccessibilityStatement";
 import SiteCredits from "./pages/SiteCredits";
+import About from "./pages/About";
 import ChatWidget from "./components/ChatWidget";
 
 function Router() {
@@ -38,6 +39,7 @@ function Router() {
       <Route path="/privacy-policy" component={Privacy} />
       <Route path="/accessibility-statement" component={AccessibilityStatement} />
       <Route path="/site-credits" component={SiteCredits} />
+      <Route path="/about" component={About} />
       <Route component={NotFound} />
     </Switch>
   );

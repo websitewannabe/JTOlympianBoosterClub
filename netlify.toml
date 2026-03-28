@@ -1,7 +1,7 @@
 
 [build]
   publish = "dist/public"
-  command = "vite build"
+  command = "vite build && node scripts/prerender-meta.mjs"
   base = "."
 
 [build.environment]
@@ -13,6 +13,8 @@
   status = 200
   force = true
 
+# Per-route HTML files from prerender take priority (force=false).
+# This catch-all only fires for routes without a static file.
 [[redirects]]
   from = "/*"
   to = "/index.html"
