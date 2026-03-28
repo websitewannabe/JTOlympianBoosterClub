@@ -80,7 +80,7 @@ const Football = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://olympianboosterclub.com/football" />
+        <link rel="canonical" href="https://olympianboosterclub.com/football/" />
         <title>
           Football | Olympian Booster Club Youth Football in Carbon County, PA
         </title>
@@ -105,7 +105,7 @@ const Football = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://olympianboosterclub.com/football"
+          content="https://olympianboosterclub.com/football/"
         />
         <meta
           property="og:image"
@@ -118,7 +118,7 @@ const Football = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Olympian Booster Club",
-            url: "https://olympianboosterclub.com/football",
+            url: "https://olympianboosterclub.com/football/",
             image: "https://olympianboosterclub.com/images/home_hero.webp",
             logo: "https://olympianboosterclub.com/images/olympian-logo.png",
             description:

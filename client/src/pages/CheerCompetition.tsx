@@ -26,7 +26,7 @@ const CheerCompetition = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://olympianboosterclub.com/competition-cheer"
+          href="https://olympianboosterclub.com/competition-cheer/"
         />
         <title>
           Competition Cheer | Olympian Booster Club Youth Competition Cheerleading in Carbon County, PA
@@ -52,7 +52,7 @@ const CheerCompetition = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://olympianboosterclub.com/competition-cheer"
+          content="https://olympianboosterclub.com/competition-cheer/"
         />
         <meta
           property="og:image"
@@ -65,7 +65,7 @@ const CheerCompetition = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Olympian Booster Club",
-            url: "https://olympianboosterclub.com/competition-cheer",
+            url: "https://olympianboosterclub.com/competition-cheer/",
             image: "https://olympianboosterclub.com/images/home_hero.webp",
             logo: "https://olympianboosterclub.com/images/olympian-logo.png",
             description:

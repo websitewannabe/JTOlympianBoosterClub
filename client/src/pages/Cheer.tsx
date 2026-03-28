@@ -24,7 +24,7 @@ const Cheer = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://olympianboosterclub.com/cheer" />
+        <link rel="canonical" href="https://olympianboosterclub.com/cheer/" />
         <title>
           Cheerleading Programs | Olympian Booster Club Youth Cheer in Carbon County, PA
         </title>
@@ -49,7 +49,7 @@ const Cheer = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://olympianboosterclub.com/cheer"
+          content="https://olympianboosterclub.com/cheer/"
         />
         <meta
           property="og:image"
@@ -62,7 +62,7 @@ const Cheer = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Olympian Booster Club",
-            url: "https://olympianboosterclub.com/cheer",
+            url: "https://olympianboosterclub.com/cheer/",
             image: "https://olympianboosterclub.com/images/home_hero.webp",
             logo: "https://olympianboosterclub.com/images/olympian-logo.png",
             description:

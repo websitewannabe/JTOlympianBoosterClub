@@ -16,6 +16,14 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST = resolve(__dirname, "..", "dist", "public");
 const SITE = "https://olympianboosterclub.com";
 
+// ─── Helper: ensure trailing slash on all non-home URLs ──────────────
+// Netlify pretty_urls adds trailing slashes, so all canonical/og:url/
+// JSON-LD urls and internal links must match to avoid 301 redirects.
+function trail(path) {
+  if (path === "/") return `${SITE}/`;
+  return `${SITE}${path}/`;
+}
+
 // ─── Page metadata for every route ───────────────────────────────────
 const pages = [
   {
@@ -23,7 +31,7 @@ const pages = [
     title: "Olympian Booster Club | Youth Sports & Community in Jim Thorpe, PA",
     description:
       "Supporting youth athletics in Jim Thorpe, PA with programs in football, cheerleading, wrestling, volleyball, and cross country for grades K\u20136.",
-    canonical: `${SITE}/`,
+    canonical: trail("/"),
     ogTitle:
       "Olympian Booster Club | Youth Sports & Community in Jim Thorpe, PA",
     ogDescription:
@@ -34,7 +42,7 @@ const pages = [
       "@context": "https://schema.org",
       "@type": "SportsOrganization",
       name: "Olympian Booster Club",
-      url: SITE,
+      url: trail("/"),
       logo: `${SITE}/logo.png`,
       description:
         "The Olympian Booster Club supports youth athletics in Jim Thorpe, PA, offering programs in football, cheerleading, wrestling, volleyball, and cross country for grades K\u20136.",
@@ -63,7 +71,7 @@ const pages = [
       "Football | Olympian Booster Club Youth Football in Carbon County, PA",
     description:
       "Building champions through teamwork, discipline, and competitive excellence with Olympian Booster Club\u2019s youth football program in Carbon County, PA.",
-    canonical: `${SITE}/football`,
+    canonical: trail("/football"),
     ogTitle:
       "Olympian Booster Club Football | Youth Football in Carbon County, PA",
     ogDescription:
@@ -74,7 +82,7 @@ const pages = [
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       name: "Olympian Booster Club",
-      url: `${SITE}/football`,
+      url: trail("/football"),
       description:
         "Youth football program empowering kids through teamwork, fitness, and competitive league play across Carbon County, PA.",
     },
@@ -85,7 +93,7 @@ const pages = [
       "Cheerleading Programs | Olympian Booster Club Youth Cheer in Carbon County, PA",
     description:
       "Discover competitive and sideline cheerleading programs for youth athletes in Carbon County, PA. Olympian Booster Club offers comprehensive cheer training.",
-    canonical: `${SITE}/cheer`,
+    canonical: trail("/cheer"),
     ogTitle:
       "Olympian Booster Club Cheer Program | Carbon County Youth Cheerleading",
     ogDescription:
@@ -96,7 +104,7 @@ const pages = [
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       name: "Olympian Booster Club",
-      url: `${SITE}/cheer`,
+      url: trail("/cheer"),
       description:
         "Comprehensive cheerleading programs for youth athletes in Carbon County, PA.",
     },
@@ -107,7 +115,7 @@ const pages = [
       "Competition Cheer | Olympian Booster Club Youth Competition Cheerleading in Carbon County, PA",
     description:
       "Elite athletic training and competitive cheerleading excellence for youth athletes in Carbon County, PA. Join our competition cheer program today.",
-    canonical: `${SITE}/competition-cheer`,
+    canonical: trail("/competition-cheer"),
     ogTitle:
       "Olympian Booster Club Competition Cheer | Carbon County Youth Cheerleading",
     ogDescription:
@@ -118,7 +126,7 @@ const pages = [
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       name: "Olympian Booster Club",
-      url: `${SITE}/competition-cheer`,
+      url: trail("/competition-cheer"),
       description:
         "Elite competitive cheerleading program for youth athletes in Carbon County, PA.",
     },
@@ -129,7 +137,7 @@ const pages = [
       "Sideline Cheer | Olympian Booster Club Youth Sideline Cheerleading in Carbon County, PA",
     description:
       "Support your team with school spirit and energy through our youth sideline cheerleading program in Carbon County, PA.",
-    canonical: `${SITE}/sideline-cheer`,
+    canonical: trail("/sideline-cheer"),
     ogTitle:
       "Olympian Booster Club Sideline Cheer | Carbon County Youth Cheerleading",
     ogDescription:
@@ -140,7 +148,7 @@ const pages = [
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       name: "Olympian Booster Club",
-      url: `${SITE}/sideline-cheer`,
+      url: trail("/sideline-cheer"),
       description:
         "Youth sideline cheerleading program in Carbon County, PA.",
     },
@@ -151,7 +159,7 @@ const pages = [
       "Cross Country | Olympian Booster Club Youth Running in Carbon County, PA",
     description:
       "Running for fun, friendly competition, and building healthy habits with Olympian Booster Club\u2019s youth cross country program in Carbon County, PA.",
-    canonical: `${SITE}/cross-country`,
+    canonical: trail("/cross-country"),
     ogTitle:
       "Olympian Booster Club Cross Country | Youth Running in Carbon County, PA",
     ogDescription:
@@ -162,7 +170,7 @@ const pages = [
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       name: "Olympian Booster Club",
-      url: `${SITE}/cross-country`,
+      url: trail("/cross-country"),
       description:
         "Youth cross country running program in Carbon County, PA.",
     },
@@ -173,7 +181,7 @@ const pages = [
       "Girls Volleyball | Olympian Booster Club Youth Volleyball in Carbon County, PA",
     description:
       "Serving up excellence through teamwork, skill development, and competitive spirit with Olympian Booster Club\u2019s girls volleyball in Carbon County, PA.",
-    canonical: `${SITE}/girls-volleyball`,
+    canonical: trail("/girls-volleyball"),
     ogTitle:
       "Olympian Booster Club Girls Volleyball | Youth Volleyball in Carbon County",
     ogDescription:
@@ -184,7 +192,7 @@ const pages = [
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       name: "Olympian Booster Club",
-      url: `${SITE}/girls-volleyball`,
+      url: trail("/girls-volleyball"),
       description:
         "Youth girls volleyball program in Carbon County, PA.",
     },
@@ -195,7 +203,7 @@ const pages = [
       "Wrestling | Olympian Booster Club Youth Wrestling in Carbon County, PA",
     description:
       "Building strength, discipline, and mental toughness through youth wrestling at Olympian Booster Club in Carbon County, PA.",
-    canonical: `${SITE}/wrestling`,
+    canonical: trail("/wrestling"),
     ogTitle:
       "Olympian Booster Club Wrestling | Youth Wrestling in Carbon County, PA",
     ogDescription:
@@ -206,7 +214,7 @@ const pages = [
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       name: "Olympian Booster Club",
-      url: `${SITE}/wrestling`,
+      url: trail("/wrestling"),
       description:
         "Youth wrestling program in Carbon County, PA.",
     },
@@ -216,7 +224,7 @@ const pages = [
     title: "Contact Us | Olympian Booster Club in Carbon County, PA",
     description:
       "Have a question or want to get involved? Reach out to Olympian Booster Club in Carbon County, PA. Use our contact form and we will respond promptly.",
-    canonical: `${SITE}/contact-us`,
+    canonical: trail("/contact-us"),
     ogTitle:
       "Contact Olympian Booster Club | Youth Sports in Carbon County, PA",
     ogDescription:
@@ -227,7 +235,7 @@ const pages = [
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       name: "Olympian Booster Club",
-      url: `${SITE}/contact-us`,
+      url: trail("/contact-us"),
       email: "olympianbooster@gmail.com",
       description:
         "Contact the Olympian Booster Club for youth sports information in Carbon County, PA.",
@@ -239,7 +247,7 @@ const pages = [
       "About Us | Olympian Booster Club - Supporting Youth Athletics Since 1985",
     description:
       "Learn about Olympian Booster Club\u2019s mission, board members, and 40-year history supporting youth athletics in Jim Thorpe and Carbon County, PA.",
-    canonical: `${SITE}/about`,
+    canonical: trail("/about"),
     ogTitle:
       "About Us | Olympian Booster Club - Supporting Youth Athletics Since 1985",
     ogDescription:
@@ -250,7 +258,7 @@ const pages = [
       "@context": "https://schema.org",
       "@type": "AboutPage",
       name: "About Olympian Booster Club",
-      url: `${SITE}/about`,
+      url: trail("/about"),
       description:
         "Mission, board members, and history of the Olympian Booster Club supporting youth athletics since 1985.",
     },
@@ -261,7 +269,7 @@ const pages = [
       "Privacy Policy | Olympian Booster Club - Data Protection & Privacy",
     description:
       "Olympian Booster Club privacy policy outlining data collection, cookies, user rights, and our commitment to protecting your personal information.",
-    canonical: `${SITE}/privacy-policy`,
+    canonical: trail("/privacy-policy"),
     ogTitle:
       "Privacy Policy | Olympian Booster Club - Data Protection & Privacy",
     ogDescription:
@@ -272,7 +280,7 @@ const pages = [
       "@context": "https://schema.org",
       "@type": "WebPage",
       name: "Privacy Policy",
-      url: `${SITE}/privacy-policy`,
+      url: trail("/privacy-policy"),
       description:
         "Privacy policy for the Olympian Booster Club website.",
     },
@@ -283,7 +291,7 @@ const pages = [
       "Accessibility Statement | Olympian Booster Club - Digital Accessibility Commitment",
     description:
       "Olympian Booster Club\u2019s commitment to digital accessibility, WCAG 2.1 compliance, and ensuring our website is usable by people with disabilities.",
-    canonical: `${SITE}/accessibility-statement`,
+    canonical: trail("/accessibility-statement"),
     ogTitle:
       "Accessibility Statement | Olympian Booster Club - Digital Accessibility Commitment",
     ogDescription:
@@ -294,7 +302,7 @@ const pages = [
       "@context": "https://schema.org",
       "@type": "WebPage",
       name: "Accessibility Statement",
-      url: `${SITE}/accessibility-statement`,
+      url: trail("/accessibility-statement"),
       description:
         "Accessibility statement and WCAG 2.1 compliance information.",
     },
@@ -304,7 +312,7 @@ const pages = [
     title: "Site Credits | Olympian Booster Club",
     description:
       "Website credits for the Olympian Booster Club site. Built by Website Wannabe with web design, SEO, AI, and accessibility services.",
-    canonical: `${SITE}/site-credits`,
+    canonical: trail("/site-credits"),
     ogTitle: "Site Credits | Olympian Booster Club",
     ogDescription:
       "Website credits for the Olympian Booster Club site.",
@@ -314,7 +322,7 @@ const pages = [
       "@context": "https://schema.org",
       "@type": "WebPage",
       name: "Site Credits",
-      url: `${SITE}/site-credits`,
+      url: trail("/site-credits"),
       description:
         "Website credits and acknowledgements for the Olympian Booster Club website.",
     },
@@ -322,22 +330,23 @@ const pages = [
 ];
 
 // ─── Navigation links (fixes orphan-page issue) ─────────────────────
+// All hrefs use trailing slashes to match Netlify pretty_urls and avoid 301s.
 const navLinks = `
 <nav aria-label="Site navigation">
   <ul>
     <li><a href="/">Home</a></li>
-    <li><a href="/football">Football</a></li>
-    <li><a href="/cheer">Cheerleading</a></li>
-    <li><a href="/competition-cheer">Competition Cheer</a></li>
-    <li><a href="/sideline-cheer">Sideline Cheer</a></li>
-    <li><a href="/cross-country">Cross Country</a></li>
-    <li><a href="/girls-volleyball">Girls Volleyball</a></li>
-    <li><a href="/wrestling">Wrestling</a></li>
-    <li><a href="/contact-us">Contact Us</a></li>
-    <li><a href="/about">About Us</a></li>
-    <li><a href="/privacy-policy">Privacy Policy</a></li>
-    <li><a href="/accessibility-statement">Accessibility</a></li>
-    <li><a href="/site-credits">Site Credits</a></li>
+    <li><a href="/football/">Football</a></li>
+    <li><a href="/cheer/">Cheerleading</a></li>
+    <li><a href="/competition-cheer/">Competition Cheer</a></li>
+    <li><a href="/sideline-cheer/">Sideline Cheer</a></li>
+    <li><a href="/cross-country/">Cross Country</a></li>
+    <li><a href="/girls-volleyball/">Girls Volleyball</a></li>
+    <li><a href="/wrestling/">Wrestling</a></li>
+    <li><a href="/contact-us/">Contact Us</a></li>
+    <li><a href="/about/">About Us</a></li>
+    <li><a href="/privacy-policy/">Privacy Policy</a></li>
+    <li><a href="/accessibility-statement/">Accessibility</a></li>
+    <li><a href="/site-credits/">Site Credits</a></li>
     <li><a href="/sitemap.xml">Sitemap</a></li>
   </ul>
 </nav>`;

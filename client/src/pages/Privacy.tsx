@@ -23,7 +23,7 @@ const Privacy = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://olympianboosterclub.com/privacy-policy" />
+        <link rel="canonical" href="https://olympianboosterclub.com/privacy-policy/" />
         <title>Privacy Policy | Olympian Booster Club - Data Protection & Privacy</title>
         <meta name="description" content="Olympian Booster Club privacy policy outlining data collection, cookies, user rights, and our commitment to protecting your personal information." />
         <meta name="keywords" content="privacy policy, data protection, cookies, user rights, personal information, Olympian Booster Club" />
@@ -32,7 +32,7 @@ const Privacy = () => {
         <meta property="og:title" content="Privacy Policy | Olympian Booster Club - Data Protection & Privacy" />
         <meta property="og:description" content="Olympian Booster Club privacy policy outlining data collection, cookies, user rights, and our commitment to protecting your personal information." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://olympianboosterclub.com/privacy-policy" />
+        <meta property="og:url" content="https://olympianboosterclub.com/privacy-policy/" />
         <meta property="og:image" content="https://olympianboosterclub.com/olympian-logo.png" />
 
         <script type="application/ld+json">
@@ -41,7 +41,7 @@ const Privacy = () => {
             "@type": "WebPage",
             "name": "Privacy Policy",
             "description": "Olympian Booster Club privacy policy outlining data collection, cookies, user rights, and our commitment to protecting your personal information.",
-            "url": "https://olympianboosterclub.com/privacy-policy",
+            "url": "https://olympianboosterclub.com/privacy-policy/",
             "isPartOf": {
               "@type": "WebSite",
               "name": "Olympian Booster Club",

@@ -26,7 +26,7 @@ const GirlsVolleyball = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://olympianboosterclub.com/girls-volleyball"
+          href="https://olympianboosterclub.com/girls-volleyball/"
         />
         <title>
           Girls Volleyball | Olympian Booster Club Youth Volleyball in Carbon
@@ -53,7 +53,7 @@ const GirlsVolleyball = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://olympianboosterclub.com/girls-volleyball"
+          content="https://olympianboosterclub.com/girls-volleyball/"
         />
         <meta
           property="og:image"
@@ -66,7 +66,7 @@ const GirlsVolleyball = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Olympian Booster Club",
-            url: "https://olympianboosterclub.com/girls-volleyball",
+            url: "https://olympianboosterclub.com/girls-volleyball/",
             image: "https://olympianboosterclub.com/images/home_hero.webp",
             logo: "https://olympianboosterclub.com/images/olympian-logo.png",
             description:

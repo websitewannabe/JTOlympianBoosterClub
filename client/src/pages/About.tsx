@@ -23,7 +23,7 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://olympianboosterclub.com/about" />
+        <link rel="canonical" href="https://olympianboosterclub.com/about/" />
         <title>About Us | Olympian Booster Club - Supporting Youth Athletics Since 1985</title>
         <meta name="description" content="Learn about the Olympian Booster Club's mission, board members, and 40-year history supporting youth athletics in Jim Thorpe and Carbon County, PA since 1985." />
         <meta name="keywords" content="Olympian Booster Club about, youth sports history, Carbon County booster club, athletic support organization, board members" />
@@ -32,7 +32,7 @@ const About = () => {
         <meta property="og:title" content="About Us | Olympian Booster Club - Supporting Youth Athletics Since 1985" />
         <meta property="og:description" content="Learn about the Olympian Booster Club's mission, board members, and 40-year history supporting youth athletics in Jim Thorpe and Carbon County, PA since 1985." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://olympianboosterclub.com/about" />
+        <meta property="og:url" content="https://olympianboosterclub.com/about/" />
         <meta property="og:image" content="https://olympianboosterclub.com/olympian-logo.png" />
 
         <script type="application/ld+json">
@@ -41,7 +41,7 @@ const About = () => {
             "@type": "AboutPage",
             "name": "About Olympian Booster Club",
             "description": "Learn about the Olympian Booster Club's mission, board members, and history supporting youth athletics in Jim Thorpe and Carbon County, PA.",
-            "url": "https://olympianboosterclub.com/about",
+            "url": "https://olympianboosterclub.com/about/",
             "isPartOf": {
               "@type": "WebSite",
               "name": "Olympian Booster Club",

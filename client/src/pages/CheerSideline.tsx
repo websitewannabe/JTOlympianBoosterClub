@@ -57,7 +57,7 @@ const CheerSideline = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://olympianboosterclub.com/sideline-cheer"
+          href="https://olympianboosterclub.com/sideline-cheer/"
         />
         <title>
           Sideline Cheer | Olympian Booster Club Youth Sideline Cheerleading in Carbon County, PA
@@ -83,7 +83,7 @@ const CheerSideline = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://olympianboosterclub.com/sideline-cheer"
+          content="https://olympianboosterclub.com/sideline-cheer/"
         />
         <meta
           property="og:image"
@@ -96,7 +96,7 @@ const CheerSideline = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Olympian Booster Club",
-            url: "https://olympianboosterclub.com/sideline-cheer",
+            url: "https://olympianboosterclub.com/sideline-cheer/",
             image: "https://olympianboosterclub.com/images/home_hero.webp",
             logo: "https://olympianboosterclub.com/images/olympian-logo.png",
             description:

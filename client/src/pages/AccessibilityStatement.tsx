@@ -22,7 +22,7 @@ const AccessibilityStatement = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://olympianboosterclub.com/accessibility-statement" />
+        <link rel="canonical" href="https://olympianboosterclub.com/accessibility-statement/" />
         <title>Accessibility Statement | Olympian Booster Club - Digital Accessibility Commitment</title>
         <meta name="description" content="Olympian Booster Club's commitment to digital accessibility, WCAG 2.1 compliance, and ensuring our website is usable by people with disabilities." />
         <meta name="keywords" content="accessibility statement, digital accessibility, WCAG compliance, disability access, inclusive design, web accessibility" />
@@ -31,7 +31,7 @@ const AccessibilityStatement = () => {
         <meta property="og:title" content="Accessibility Statement | Olympian Booster Club - Digital Accessibility Commitment" />
         <meta property="og:description" content="Olympian Booster Club's commitment to digital accessibility, WCAG 2.1 compliance, and ensuring our website is usable by people with disabilities." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://olympianboosterclub.com/accessibility-statement" />
+        <meta property="og:url" content="https://olympianboosterclub.com/accessibility-statement/" />
         <meta property="og:image" content="https://olympianboosterclub.com/olympian-logo.png" />
 
         <script type="application/ld+json">
@@ -40,7 +40,7 @@ const AccessibilityStatement = () => {
             "@type": "WebPage",
             "name": "Accessibility Statement",
             "description": "Olympian Booster Club's commitment to digital accessibility, WCAG 2.1 compliance, and ensuring our website is usable by people with disabilities.",
-            "url": "https://olympianboosterclub.com/accessibility-statement",
+            "url": "https://olympianboosterclub.com/accessibility-statement/",
             "isPartOf": {
               "@type": "WebSite",
               "name": "Olympian Booster Club",

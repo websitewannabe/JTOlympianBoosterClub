@@ -26,7 +26,7 @@ const Wrestling = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://olympianboosterclub.com/wrestling"
+          href="https://olympianboosterclub.com/wrestling/"
         />
         <title>
           Wrestling | Olympian Booster Club Youth Wrestling in Carbon County, PA
@@ -52,7 +52,7 @@ const Wrestling = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://olympianboosterclub.com/wrestling"
+          content="https://olympianboosterclub.com/wrestling/"
         />
         <meta
           property="og:image"
@@ -65,7 +65,7 @@ const Wrestling = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Olympian Booster Club",
-            url: "https://olympianboosterclub.com/wrestling",
+            url: "https://olympianboosterclub.com/wrestling/",
             image: "https://olympianboosterclub.com/images/home_hero.webp",
             logo: "https://olympianboosterclub.com/images/olympian-logo.png",
             description:

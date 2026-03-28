@@ -39,7 +39,7 @@ const SiteCredits = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://olympianboosterclub.com/site-credits"
+          href="https://olympianboosterclub.com/site-credits/"
         />
         <title>Site Credits | Olympian Booster Club</title>
         <meta
@@ -59,7 +59,7 @@ const SiteCredits = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://olympianboosterclub.com/site-credits"
+          content="https://olympianboosterclub.com/site-credits/"
         />
         <meta
           property="og:image"
@@ -88,7 +88,7 @@ const SiteCredits = () => {
             name: "Site Credits",
             description:
               "Website credits for the Olympian Booster Club site.",
-            url: "https://olympianboosterclub.com/site-credits",
+            url: "https://olympianboosterclub.com/site-credits/",
             isPartOf: {
               "@type": "WebSite",
               name: "Olympian Booster Club",
