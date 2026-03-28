@@ -1,6 +1,10 @@
 User-agent: *
 Allow: /
 
+# Block API routes
+Disallow: /api/
+Disallow: /.netlify/
+
 # Block Netlify image optimization URLs from being indexed
 Disallow: /.netlify/images*
 

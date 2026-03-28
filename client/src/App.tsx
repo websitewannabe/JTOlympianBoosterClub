@@ -20,6 +20,8 @@ import CheerCompetition from "./pages/CheerCompetition";
 import CheerSideline from "./pages/CheerSideline";
 import Privacy from "./pages/Privacy";
 import AccessibilityStatement from "./pages/AccessibilityStatement";
+import SiteCredits from "./pages/SiteCredits";
+import ChatWidget from "./components/ChatWidget";
 
 function Router() {
   return (
@@ -35,6 +37,7 @@ function Router() {
       <Route path="/sideline-cheer" component={CheerSideline} />
       <Route path="/privacy-policy" component={Privacy} />
       <Route path="/accessibility-statement" component={AccessibilityStatement} />
+      <Route path="/site-credits" component={SiteCredits} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -55,6 +58,7 @@ function App() {
           <Footer />
         </div>
         <Toaster />
+        <ChatWidget />
       </TooltipProvider>
     </QueryClientProvider>
   );

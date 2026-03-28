@@ -34,6 +34,21 @@ const About = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://olympianboosterclub.com/about" />
         <meta property="og:image" content="https://olympianboosterclub.com/olympian-logo.png" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "About Olympian Booster Club",
+            "description": "Learn about the Olympian Booster Club's mission, board members, and history supporting youth athletics in Jim Thorpe and Carbon County, PA.",
+            "url": "https://olympianboosterclub.com/about",
+            "isPartOf": {
+              "@type": "WebSite",
+              "name": "Olympian Booster Club",
+              "url": "https://olympianboosterclub.com"
+            }
+          })}
+        </script>
       </Helmet>
       
       <div className="pt-10 bg-lightgray">

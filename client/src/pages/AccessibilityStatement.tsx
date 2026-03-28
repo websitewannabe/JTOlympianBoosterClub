@@ -33,6 +33,21 @@ const AccessibilityStatement = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://olympianboosterclub.com/accessibility-statement" />
         <meta property="og:image" content="https://olympianboosterclub.com/olympian-logo.png" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Accessibility Statement",
+            "description": "Olympian Booster Club's commitment to digital accessibility, WCAG 2.1 compliance, and ensuring our website is usable by people with disabilities.",
+            "url": "https://olympianboosterclub.com/accessibility-statement",
+            "isPartOf": {
+              "@type": "WebSite",
+              "name": "Olympian Booster Club",
+              "url": "https://olympianboosterclub.com"
+            }
+          })}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

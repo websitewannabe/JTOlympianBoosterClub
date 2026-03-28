@@ -1,42 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import HeroBanner from "@/components/HeroBanner";
 import SponsorsSection from "@/components/SponsorsSection";
 import SportsRegistrationSection from "@/components/SportsRegistrationSection";
 import OptimizedImage from "@/components/ui/optimized-image";
-import ChampionshipPromoPopup from "@/components/ChampionshipPromoPopup";
 import DonationPopup from "@/components/DonationPopup";
 import { Helmet } from "react-helmet";
 import champsImage from "../assets/JT Football Images/209-champs_54081763157_o.jpg";
 
 const Home = () => {
-  const [isPromoPopupOpen, setIsPromoPopupOpen] = useState(false);
   const [isDonationPopupOpen, setIsDonationPopupOpen] = useState(false);
-
-  // Show promo popup after 7 seconds, but only once per visit
-  useEffect(() => {
-    // Check if popup has already been shown during this session
-    const hasShownPromoPopup = sessionStorage.getItem('olympian-promo-popup-shown');
-    
-    if (!hasShownPromoPopup) {
-      const timer = setTimeout(() => {
-        setIsPromoPopupOpen(true);
-        // Mark popup as shown for this session
-        sessionStorage.setItem('olympian-promo-popup-shown', 'true');
-      }, 7000); // 7 seconds
-
-      return () => clearTimeout(timer);
-    }
-  }, []);
-
-  const closePromoPopup = () => {
-    setIsPromoPopupOpen(false);
-    // Mark popup as shown for this session when manually closed
-    sessionStorage.setItem('olympian-promo-popup-shown', 'true');
-  };
-
-  const openDonationPopup = () => {
-    setIsDonationPopupOpen(true);
-  };
 
   const closeDonationPopup = () => {
     setIsDonationPopupOpen(false);
@@ -57,7 +29,7 @@ const Home = () => {
           name="keywords"
           content="youth sports, Jim Thorpe PA, football, cheerleading, wrestling, volleyball, cross country, booster club, community sports, youth athletics"
         />
-        
+
         {/* Open Graph metadata */}
         <meta property="og:title" content="Olympian Booster Club | Youth Sports & Community in Jim Thorpe, PA" />
         <meta property="og:description" content="Supporting youth athletics in Jim Thorpe, PA with programs in football, cheerleading, wrestling, volleyball, and cross country for grades K–6." />
@@ -69,7 +41,7 @@ const Home = () => {
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:alt" content="Olympian Booster Club - Youth Sports in Jim Thorpe, PA" />
         <meta property="og:site_name" content="Olympian Booster Club" />
-        
+
         {/* Twitter Card metadata */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Olympian Booster Club | Youth Sports & Community in Jim Thorpe, PA" />
@@ -111,7 +83,7 @@ const Home = () => {
       </Helmet>
 
       <HeroBanner />
-      
+
       {/* Championship Hero Section */}
       <section className="relative py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -124,7 +96,7 @@ const Home = () => {
               Celebrating our champions and the spirit of excellence that defines Olympian football.
             </p>
           </div>
-          
+
           <div className="max-w-4xl mx-auto">
             <div className="overflow-hidden rounded-xl shadow-2xl">
               <OptimizedImage
@@ -141,13 +113,10 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+
       <SponsorsSection />
       <SportsRegistrationSection />
-      
-      {/* Championship Promo Popup */}
-      <ChampionshipPromoPopup isOpen={isPromoPopupOpen} onClose={closePromoPopup} onDonateClick={openDonationPopup} />
-      
+
       {/* Donation Popup */}
       <DonationPopup isOpen={isDonationPopupOpen} onClose={closeDonationPopup} />
     </>

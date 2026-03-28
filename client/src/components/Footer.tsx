@@ -11,9 +11,7 @@ const Footer = () => {
   const { toast } = useToast();
 
   const loadAccessibilityTools = () => {
-    // Check if already loaded to prevent multiple loads
     if (window.interdeal && document.querySelector('script[src*="accessibility.js"]')) {
-      // If already loaded, just open the panel
       if (window.interdeal.open) {
         window.interdeal.open();
       }
@@ -21,7 +19,6 @@ const Footer = () => {
     }
 
     try {
-      // Configure EqualWeb settings
       window.interdeal = {
         get sitekey() { return "01c6d0d9029914e951f8fe7cf7bab245" },
         get domains() {
@@ -34,22 +31,10 @@ const Footer = () => {
         "Menulang": "EN",
         "draggable": true,
         "btnStyle": {
-          "vPosition": [
-            "80%",
-            "80%"
-          ],
-          "margin": [
-            "0",
-            "0"
-          ],
-          "scale": [
-            "0.5",
-            "0.5"
-          ],
-          "color": {
-            "main": "#e6051f",
-            "second": "#ffffff"
-          },
+          "vPosition": ["80%", "80%"],
+          "margin": ["0", "0"],
+          "scale": ["0.5", "0.5"],
+          "color": { "main": "#e6051f", "second": "#ffffff" },
           "icon": {
             "outline": false,
             "outlineColor": "#ffffff",
@@ -60,16 +45,13 @@ const Footer = () => {
         "showTooltip": true
       };
 
-      // Dynamically load the EqualWeb script
       const script = document.createElement('script');
       script.src = window.interdeal.domains.js + 'core/5.1.15/accessibility.js';
       script.defer = true;
       script.crossOrigin = 'anonymous';
       script.setAttribute('data-cfasync', 'true');
-      
-      // Add event listener to open panel once script loads
+
       script.onload = () => {
-        // Small delay to ensure the widget is fully initialized
         setTimeout(() => {
           if (window.interdeal && typeof window.interdeal.open === 'function') {
             window.interdeal.open();
@@ -77,7 +59,6 @@ const Footer = () => {
         }, 1000);
       };
 
-      // Add error handling
       script.onerror = () => {
         console.warn('EqualWeb accessibility script failed to load');
         toast({
@@ -133,43 +114,61 @@ const Footer = () => {
     <footer className="bg-primary text-white pt-12 pb-6">
       <div className="container mx-auto px-4 max-w-screen-xl">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
+          {/* Logo + Social Icons + Accessibility */}
           <div className="flex flex-col items-center md:items-start">
             <div className="mb-4 w-48 px-4">
               <Link href="/" onClick={() => window.scrollTo(0, 0)}>
-                <OptimizedImage 
-                  src={olympianLogo} 
-                  alt="Olympian Booster Club Logo" 
+                <OptimizedImage
+                  src={olympianLogo}
+                  alt="Olympian Booster Club Logo"
                   width={192}
                   height={120}
                   quality={90}
                   format="webp"
                   fit="contain"
-                  className="w-full h-auto cursor-pointer hover:opacity-80 transition-opacity" 
+                  className="w-full h-auto cursor-pointer hover:opacity-80 transition-opacity"
                 />
               </Link>
             </div>
+            {/* Social Media Icons */}
+            <div className="flex gap-4 mb-3">
+              <a
+                href="https://www.facebook.com/olympianboosterclub"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow us on Facebook"
+                className="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center hover:bg-[#FF4444] transition-colors"
+              >
+                <i className="fab fa-facebook-f text-sm" />
+              </a>
+              <a
+                href="mailto:olympianbooster@gmail.com"
+                aria-label="Email us"
+                className="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center hover:bg-[#FF4444] transition-colors"
+              >
+                <i className="fas fa-envelope text-sm" />
+              </a>
+            </div>
+            {/* Accessibility Tools Button */}
+            <button
+              onClick={loadAccessibilityTools}
+              className="flex items-center gap-2 text-sm hover:text-[#FF4444] transition-colors"
+            >
+              <i className="fas fa-universal-access" />
+              Accessibility Tools
+            </button>
           </div>
 
+          {/* Quick Links */}
           <div>
             <h3 className="font-montserrat font-bold text-xl mb-4">QUICK LINKS</h3>
             <ul className="space-y-2">
               <li><Link href="/" className="hover:text-[#FF4444] transition-colors">Home</Link></li>
               <li><Link href="/contact-us" className="hover:text-[#FF4444] transition-colors">Contact</Link></li>
-              <li>
-                <button 
-                  onClick={() => {
-                    // Load and initialize EqualWeb accessibility tools on-demand
-                    loadAccessibilityTools();
-                  }}
-                  className="flex items-center hover:text-[#FF4444] transition-colors text-left"
-                >
-                  <i className="fas fa-universal-access mr-2"></i>
-                  Accessibility Tools
-                </button>
-              </li>
             </ul>
           </div>
 
+          {/* Sports */}
           <div>
             <h3 className="font-montserrat font-bold text-xl mb-4">SPORTS</h3>
             <ul className="space-y-2">
@@ -182,23 +181,36 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Contact Info */}
           <div>
             <h3 className="font-montserrat font-bold text-xl mb-4">CONTACT INFO</h3>
             <ul className="space-y-2">
               <li className="flex items-start">
-                <i className="fas fa-envelope mt-1 mr-2"></i>
+                <i className="fas fa-envelope mt-1 mr-2" />
                 <span>olympianbooster@gmail.com</span>
               </li>
             </ul>
           </div>
         </div>
 
+        {/* Bottom Bar */}
         <div className="border-t border-lightblue pt-6 text-center text-sm">
           <p>&copy; {new Date().getFullYear()} Olympian Booster Club. All rights reserved.</p>
-          <p className="mt-2">
-            <a href="/sitemap.xml" className="hover:text-[#FF4444] transition-colors">Sitemap</a> | 
-            <Link href="/privacy-policy" className="hover:text-[#FF4444] transition-colors"> Privacy Policy</Link> | 
-            <Link href="/accessibility-statement" className="hover:text-[#FF4444] transition-colors"> Accessibility Statement</Link>
+          <div className="mt-2 flex flex-wrap justify-center gap-x-6 gap-y-2 py-1">
+            <Link href="/privacy-policy" className="hover:text-[#FF4444] transition-colors">Privacy Policy</Link>
+            <Link href="/accessibility-statement" className="hover:text-[#FF4444] transition-colors">Accessibility</Link>
+            <a href="/sitemap.xml" className="hover:text-[#FF4444] transition-colors">Sitemap</a>
+            <Link href="/site-credits" className="hover:text-[#FF4444] transition-colors">Site Credits</Link>
+          </div>
+          <p className="mt-3">
+            <a
+              href="https://aiwannabe.co"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="text-blue-200 hover:text-[#FF4444] transition-colors"
+            >
+              Powered by AI Wannabe
+            </a>
           </p>
         </div>
       </div>
