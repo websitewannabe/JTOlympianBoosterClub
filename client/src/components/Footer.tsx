@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { useState } from "react";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
+
 import OptimizedImage from "./ui/optimized-image";
 import olympianLogo from "../assets/olympian-logo.png";
 
@@ -11,71 +12,8 @@ const Footer = () => {
   const { toast } = useToast();
 
   const loadAccessibilityTools = () => {
-    if (window.interdeal && document.querySelector('script[src*="accessibility.js"]')) {
-      if (window.interdeal.open) {
-        window.interdeal.open();
-      }
-      return;
-    }
-
-    try {
-      window.interdeal = {
-        get sitekey() { return "01c6d0d9029914e951f8fe7cf7bab245" },
-        get domains() {
-          return {
-            "js": "https://cdn.equalweb.com/",
-            "acc": "https://access.equalweb.com/"
-          }
-        },
-        "Position": "left",
-        "Menulang": "EN",
-        "draggable": true,
-        "btnStyle": {
-          "vPosition": ["80%", "80%"],
-          "margin": ["0", "0"],
-          "scale": ["0.5", "0.5"],
-          "color": { "main": "#e6051f", "second": "#ffffff" },
-          "icon": {
-            "outline": false,
-            "outlineColor": "#ffffff",
-            "type": 12,
-            "shape": "semicircle"
-          }
-        },
-        "showTooltip": true
-      };
-
-      const script = document.createElement('script');
-      script.src = window.interdeal.domains.js + 'core/5.1.15/accessibility.js';
-      script.defer = true;
-      script.crossOrigin = 'anonymous';
-      script.setAttribute('data-cfasync', 'true');
-
-      script.onload = () => {
-        setTimeout(() => {
-          if (window.interdeal && typeof window.interdeal.open === 'function') {
-            window.interdeal.open();
-          }
-        }, 1000);
-      };
-
-      script.onerror = () => {
-        console.warn('EqualWeb accessibility script failed to load');
-        toast({
-          title: "Accessibility Tools",
-          description: "Unable to load accessibility tools. Please try again later.",
-          variant: "destructive"
-        });
-      };
-
-      document.body.appendChild(script);
-    } catch (error) {
-      console.error('Error initializing accessibility tools:', error);
-      toast({
-        title: "Accessibility Tools",
-        description: "Unable to initialize accessibility tools.",
-        variant: "destructive"
-      });
+    if (window.openAccessibilityTools) {
+      window.openAccessibilityTools();
     }
   };
 

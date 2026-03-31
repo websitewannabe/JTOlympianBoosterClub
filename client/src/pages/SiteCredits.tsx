@@ -30,7 +30,7 @@ const SiteCredits = () => {
       icon: "fas fa-universal-access",
       title: "Accessibility",
       description:
-        "WCAG 2.1 AA compliance with EqualWeb integration ensuring the site is usable by everyone.",
+        "WCAG 2.1 AA compliance with Website Wannabe's custom accessibility widget ensuring the site is usable by everyone.",
     },
   ];
 
